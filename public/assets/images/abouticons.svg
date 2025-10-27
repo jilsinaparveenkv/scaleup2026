@@ -1,0 +1,15 @@
+<svg width="137" height="38" viewBox="0 0 137 38" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M134.895 0C135.926 0 136.762 0.835371 136.762 1.86621V24.7354C136.762 25.7663 135.926 26.6016 134.895 26.6016H122.362C121.039 26.6016 119.991 27.6807 119.664 28.9629C118.329 34.2082 113.095 37.4032 107.975 36.0996C102.854 34.7959 99.7861 29.4875 101.121 24.2422C101.903 21.1705 104.022 18.8025 106.672 17.6291C108.509 16.8154 110.159 15.2298 110.159 13.2203V1.86621C110.16 0.83537 110.996 0 112.026 0H134.895Z" fill="#9CF694"/>
+<circle cx="60.2051" cy="9.80052" r="8.86741" fill="#418CFF"/>
+<circle cx="77.9399" cy="9.80052" r="8.86741" fill="#418CFF"/>
+<circle cx="77.9399" cy="27.5353" r="8.86741" fill="#418CFF"/>
+<circle cx="60.2051" cy="27.5353" r="8.86741" fill="#418CFF"/>
+<g id="Repeat group 1_inner" data-figma-trr="r6u0.2-0f">
+<rect x="16.4493" y="1.04004" width="3.97099" height="30.5461" rx="1.9855" fill="#E052FF"/>
+</g>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(25.9904 -6.28117) rotate(60)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(44.4252 13.0866) rotate(120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(36.8697 38.7355) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(10.8793 45.0167) rotate(-120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(-7.55555 25.6489) rotate(-60)"/>
+</svg>
