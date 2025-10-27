@@ -728,13 +728,215 @@
 
 
 
-// mobile
+// mobile(without vercal)
 
 
+// "use client";
+// import React, { useEffect, useState } from "react";
+
+// const cardsRow1 = [
+//   {
+//     type: "text",
+//     year: "2024",
+//     text: "Be part of Kerala’s biggest AI & Technology Conclave and connect with innovators, leaders, and enthusiasts.",
+//   },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   { type: "image", src: "/assets/images/timeline_icon1.svg" },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   {
+//     type: "text",
+//     year: "2025",
+//     location: "Dubai",
+//     text: "Be part of Kerala’s biggest AI & Technology Conclave and connect with innovators, leaders, and enthusiasts.",
+//   },
+// ];
+
+// const cardsRow2 = [
+//   {
+//     type: "text",
+//     year: "2024",
+//     text: "Be part of Kerala’s biggest AI & Technology Conclave and connect with innovators, leaders, and enthusiasts.",
+//   },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   { type: "image", src: "/assets/images/timeline_icon2.svg" },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+//   { type: "image", src: "/assets/images/timeline_img1.png" },
+// ];
+
+// export default function ScaleUpTimeline() {
+//   const [isMobile, setIsMobile] = useState(false);
+
+//   // Detect screen size
+//   useEffect(() => {
+//     const handleResize = () => setIsMobile(window.innerWidth < 1024);
+//     handleResize();
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   // Common card renderer
+//   const renderCard = (card: any, width: string, height: string, index: number, isMobile: boolean) =>
+//     card.type === "text" ? (
+//       <div
+//         key={index}
+//         className="rounded-xl flex flex-col justify-between"
+//         style={{
+//           width,
+//           height,
+//           backgroundColor: "#202020",
+//           color: "#FFFFFF",
+//           padding: isMobile ? "6px" : "16px",
+//         }}
+//       >
+//         <p
+//           style={{
+//             fontSize: isMobile ? "12px" : "14px",
+//             lineHeight: isMobile ? "18px" : "20px",
+//             fontFamily: "Plus Jakarta Sans",
+//           }}
+//         >
+//           {card.text}
+//         </p>
+//         <div>
+//           {card.location && (
+//             <p
+//               style={{
+//                 fontSize: isMobile ? "10px" : "12px",
+//                 fontWeight: 700,
+//                 color: "#E052FF",
+//                 opacity: 0.7,
+//               }}
+//             >
+//               {card.location}
+//             </p>
+//           )}
+//           <h3
+//             style={{
+//               fontSize: isMobile ? "14px" : "2.5rem",
+//               fontWeight: 700,
+//               color:
+//                 index === 0
+//                   ? "#9CF694"
+//                   : index === 5
+//                   ? "#E052FF"
+//                   : "#FFFFFF",
+//             }}
+//           >
+//             {card.year}
+//           </h3>
+//         </div>
+//       </div>
+//     ) : (
+//       <div
+//         key={index}
+//         className="flex items-center justify-center bg-white rounded-xl overflow-hidden"
+//         style={{ width, height }}
+//       >
+//         <img
+//           src={card.src}
+//           alt="ScaleUp event"
+//           className={
+//             card.src.endsWith(".svg")
+//               ? isMobile
+//                 ? "w-10 h-10 object-contain"
+//                 : "w-[80px] h-[80px] object-contain"
+//               : "w-full h-full object-cover rounded-xl"
+//           }
+//         />
+//       </div>
+//     );
+
+//   return (
+//     <section className="relative w-full px-4 sm:px-8 md:px-16 py-12 md:py-16 bg-white overflow-hidden">
+//       {/* Top text + SVG */}
+//       <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 w-full">
+//         {/* Right text */}
+//         <div className="flex-1 w-full md:w-2/3 mt-6 md:mt-12 flex justify-end items-end">
+//           <p
+//             className="font-plusJakartaSans mt-35 px-2 sm:px-4 text-[20px] sm:text-[24px] md:text-[28px] leading-[28px] sm:leading-[32px] md:leading-[36px] text-right"
+//             style={{ color: "#202020" }}
+//           >
+//             ScaleUp Conclave hosted by ScaleUp Village, that brings together
+//             entrepreneurs, investors, aspiring business leaders
+//           </p>
+//         </div>
+
+//         {/* Left SVG */}
+//         <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col gap-4 mb-6 md:mb-10">
+//           <img
+//             src="/assets/images/04timeline.svg"
+//             alt="About ScaleUp"
+//             className="w-full h-auto"
+//           />
+//         </div>
+//       </div>
+
+//       {/* Mobile View */}
+//       {isMobile ? (
+//         <>
+//           {/* ----------------- MOBILE LAYOUT ----------------- */}
+//           <div className="flex flex-wrap justify-center gap-0 mt-0">
+//             {cardsRow1.slice(0, 3).map((card, i) =>
+//               renderCard(card, "110px", "140px", i, true)
+//             )}
+//           </div>
+//           <div className="flex flex-wrap justify-center gap-0 mt-0">
+//             {cardsRow1.slice(3, 6).map((card, i) =>
+//               renderCard(card, "110px", "140px", i, true)
+//             )}
+//           </div>
+//           <div className="flex flex-wrap justify-center gap-0 mt-0">
+//             {cardsRow2.slice(0, 3).map((card, i) =>
+//               renderCard(card, "110px", "140px", i, true)
+//             )}
+//           </div>
+//           <div className="flex flex-wrap justify-center gap-0 mt-0">
+//             {cardsRow2.slice(3, 6).map((card, i) =>
+//               renderCard(card, "110px", "140px", i, true)
+//             )}
+//           </div>
+//         </>
+//       ) : (
+//         <>
+//           {/* ----------------- DESKTOP LAYOUT ----------------- */}
+//           <div className="flex flex-wrap justify-center items-start gap-0 mt-8">
+//             {cardsRow1.map((card, index) =>
+//               renderCard(card, "12rem", "15rem", index, false)
+//             )}
+//           </div>
+//           <div className="flex justify-center gap-0 mt-0 ml-24 md:ml-48">
+//             {cardsRow2.map((card, index) =>
+//               renderCard(card, "12rem", "15rem", index, false)
+//             )}
+//           </div>
+//         </>
+//       )}
+//     </section>
+//   );
+// }
+
+
+// with vercal
 "use client";
 import React, { useEffect, useState } from "react";
+interface TextCard {
+  type: "text";
+  year: string;
+  text: string;
+  location?: string;
+}
 
-const cardsRow1 = [
+interface ImageCard {
+  type: "image";
+  src: string;
+}
+
+type Card = TextCard | ImageCard;
+
+
+const cardsRow1: Card[] = [
   {
     type: "text",
     year: "2024",
@@ -752,7 +954,7 @@ const cardsRow1 = [
   },
 ];
 
-const cardsRow2 = [
+const cardsRow2: Card[] = [
   {
     type: "text",
     year: "2024",
@@ -777,7 +979,14 @@ export default function ScaleUpTimeline() {
   }, []);
 
   // Common card renderer
-  const renderCard = (card: any, width: string, height: string, index: number, isMobile: boolean) =>
+  const renderCard = (
+    card: Card,
+    width: string,
+    height: string,
+    index: number,
+    isMobile: boolean
+  ) =>
+  
     card.type === "text" ? (
       <div
         key={index}
@@ -800,7 +1009,7 @@ export default function ScaleUpTimeline() {
           {card.text}
         </p>
         <div>
-          {card.location && (
+        {"location" in card && card.location && (
             <p
               style={{
                 fontSize: isMobile ? "10px" : "12px",

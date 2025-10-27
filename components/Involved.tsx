@@ -428,7 +428,7 @@ function Involved() {
               color: "#202020",
             }}
           >
-            Be part of Kerala's biggest AI & Technology Conclave and connect with
+            Be part of Kerala&apos;s biggest AI & Technology Conclave and connect with
             <br />
             innovators, leaders, and enthusiasts from across the country
           </p>
