@@ -244,14 +244,213 @@
 
 
 
-// responsive
+// responsive(without vercal)
 
+// "use client";
+
+// import React, { useEffect, useState } from "react";
+
+// export default function DateSection() {
+//   const targetDate = new Date("2026-01-17T09:00:00");
+//   const [timeLeft, setTimeLeft] = useState({
+//     days: "00",
+//     hours: "00",
+//     minutes: "00",
+//     seconds: "00",
+//   });
+
+//   useEffect(() => {
+    
+//     const interval = setInterval(() => {
+//       const now = new Date();
+//       const diff = targetDate.getTime() - now.getTime();
+
+//       if (diff <= 0) {
+//         clearInterval(interval);
+//         setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
+//         return;
+//       }
+
+//       const totalSeconds = Math.floor(diff / 1000);
+//       const seconds = totalSeconds % 60;
+//       const totalMinutes = Math.floor(totalSeconds / 60);
+//       const minutes = totalMinutes % 60;
+//       const totalHours = Math.floor(totalMinutes / 60);
+//       const hours = totalHours % 24;
+//       const days = Math.floor(totalHours / 24);
+
+//       setTimeLeft({
+//         days: String(days).padStart(2, "0"),
+//         hours: String(hours).padStart(2, "0"),
+//         minutes: String(minutes).padStart(2, "0"),
+//         seconds: String(seconds).padStart(2, "0"),
+//       });
+//     }, 1000);
+
+//     return () => clearInterval(interval);
+//   }, [targetDate]);
+
+//   return (
+//     <section
+//       className="w-full px-4 sm:px-8 md:px-12 py-10"
+//       style={{ backgroundColor: "var(--color-bg)" }}
+//     >
+
+//       {/* ---------------- Desktop View ---------------- */}
+//       <div className="hidden md:flex flex-row items-center justify-between gap-10">
+        
+//         {/* Stats Section (Left) */}
+//         <div
+//           className="font-gilmer leading-[85.97px] text-[60px] text-left"
+//           style={{ color: "var(--color-text)", fontWeight: "600" }}
+//         >
+//           <p className="flex items-center gap-2">
+//             2 Days
+//             <img
+//               src="/assets/images/repeat.svg"
+//               alt="rose-icon"
+//               className="h-9 w-9"
+//             />
+//           </p>
+//           <p className="flex items-center gap-2">
+//             50+ Speakers
+//             <img
+//               src="/assets/images/union.svg"
+//               alt="green-icon"
+//               className="h-9 w-9"
+//             />
+//           </p>
+//           <p className="flex items-center gap-2">
+//             5000+ Innovators
+//             <img
+//               src="/assets/images/group1.svg"
+//               alt="blue-icon"
+//               className="h-9 w-9"
+//             />
+//           </p>
+//         </div>
+
+//         {/* Timer Section (Right) */}
+//         <div className="font-gilmer text-center">
+//           <div className="flex justify-center gap-4 flex-nowrap">
+//             {Object.entries(timeLeft).map(([label, value], index) => (
+//               <div
+//                 key={index}
+//                 className="flex flex-col items-center min-w-[90px]"
+//               >
+//                 <span
+//                   className="font-sans font-plusjakartasans text-[112.66px] leading-[124.88px]"
+//                   style={{ color: "#000000" }}
+//                 >
+//                   {value}
+//                 </span>
+//                 <span
+//                   className="border rounded-full px-14 py-1 -mt-10 text-base"
+//                   style={{
+//                     backgroundColor: "#FFFFFF",
+//                     borderColor: "#000000",
+//                     color: "#000000",
+//                   }}
+//                 >
+//                   {label}
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
+//           <p
+//             className="font-gilmer mt-3 text-xl"
+//             style={{ color: "#4B5563" }}
+//           >
+//             Kerala's biggest AI & Technology Conclave
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* ---------------- Mobile View ---------------- */}
+//       <div className="flex flex-col md:hidden items-center justify-center gap-6">
+        
+//         {/* Timer Section (Top) */}
+//         <div className="font-gilmer text-center w-full">
+//           <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
+//             {Object.entries(timeLeft).map(([label, value], index) => (
+//               <div
+//                 key={index}
+//                 className="flex flex-col items-center min-w-[70px]"
+//               >
+//                 <span
+//                   className="font-sans font-normal text-[70px] sm:text-[90px] leading-[90px] sm:leading-[110px]"
+//                   style={{ color: "#000000" }}
+//                 >
+//                   {value}
+//                 </span>
+//                 <span
+//                   className="border rounded-full sm:px-6 px-5 py-1 sm:py-1 -mt-8 sm:-mt-2 text-xs sm:text-sm"
+//                   style={{
+//                     backgroundColor: "#FFFFFF",
+//                     borderColor: "#000000",
+//                     color: "#000000",
+//                   }}
+//                 >
+//                   {label}
+//                 </span>
+//               </div>
+//             ))}
+//           </div>
+
+//           <p
+//             className="font-gilmer mt-3 text-xs sm:text-sm"
+//             style={{ color: "#4B5563" }}
+//           >
+//             Kerala's biggest AI & Technology Conclave
+//           </p>
+//         </div>
+
+//         {/* Stats Section (Below) */}
+//         <div
+//           className="font-gilmer leading-[42px] text-2xl sm:text-3xl text-left w-full px-4"
+//           style={{ color: "var(--color-text)", fontWeight: "600" }}
+//         >
+//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//             2 Days
+//             <img
+//               src="/assets/images/repeat.svg"
+//               alt="rose-icon"
+//               className="h-6 w-6 sm:h-8 sm:w-8"
+//             />
+//           </p>
+//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//             50+ Speakers
+//             <img
+//               src="/assets/images/union.svg"
+//               alt="green-icon"
+//               className="h-6 w-6 sm:h-8 sm:w-8"
+//             />
+//           </p>
+//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//             5000+ Innovators
+//             <img
+//               src="/assets/images/group1.svg"
+//               alt="blue-icon"
+//               className="h-6 w-6 sm:h-8 sm:w-8"
+//             />
+//           </p>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+// vercal
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
+import Image from "next/image"; // ✅ use next/image for optimization
 
 export default function DateSection() {
-  const targetDate = new Date("2026-01-17T09:00:00");
+  // ✅ useMemo to ensure the Date object is stable across renders
+  const targetDate = useMemo(() => new Date("2026-01-17T09:00:00"), []);
+
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
     hours: "00",
@@ -287,17 +486,15 @@ export default function DateSection() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, [targetDate]); // ✅ safe now since targetDate is memoized
 
   return (
     <section
       className="w-full px-4 sm:px-8 md:px-12 py-10"
       style={{ backgroundColor: "var(--color-bg)" }}
     >
-
       {/* ---------------- Desktop View ---------------- */}
       <div className="hidden md:flex flex-row items-center justify-between gap-10">
-        
         {/* Stats Section (Left) */}
         <div
           className="font-gilmer leading-[85.97px] text-[60px] text-left"
@@ -305,25 +502,31 @@ export default function DateSection() {
         >
           <p className="flex items-center gap-2">
             2 Days
-            <img
+            <Image
               src="/assets/images/repeat.svg"
               alt="rose-icon"
+              width={36}
+              height={36}
               className="h-9 w-9"
             />
           </p>
           <p className="flex items-center gap-2">
             50+ Speakers
-            <img
+            <Image
               src="/assets/images/union.svg"
               alt="green-icon"
+              width={36}
+              height={36}
               className="h-9 w-9"
             />
           </p>
           <p className="flex items-center gap-2">
             5000+ Innovators
-            <img
+            <Image
               src="/assets/images/group1.svg"
               alt="blue-icon"
+              width={36}
+              height={36}
               className="h-9 w-9"
             />
           </p>
@@ -360,14 +563,13 @@ export default function DateSection() {
             className="font-gilmer mt-3 text-xl"
             style={{ color: "#4B5563" }}
           >
-            Kerala's biggest AI & Technology Conclave
+            Kerala&apos;s biggest AI & Technology Conclave
           </p>
         </div>
       </div>
 
       {/* ---------------- Mobile View ---------------- */}
       <div className="flex flex-col md:hidden items-center justify-center gap-6">
-        
         {/* Timer Section (Top) */}
         <div className="font-gilmer text-center w-full">
           <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
@@ -400,7 +602,7 @@ export default function DateSection() {
             className="font-gilmer mt-3 text-xs sm:text-sm"
             style={{ color: "#4B5563" }}
           >
-            Kerala's biggest AI & Technology Conclave
+            Kerala&apos;s biggest AI & Technology Conclave
           </p>
         </div>
 
@@ -411,36 +613,39 @@ export default function DateSection() {
         >
           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
             2 Days
-            <img
+            <Image
               src="/assets/images/repeat.svg"
               alt="rose-icon"
+              width={32}
+              height={32}
               className="h-6 w-6 sm:h-8 sm:w-8"
             />
           </p>
           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
             50+ Speakers
-            <img
+            <Image
               src="/assets/images/union.svg"
               alt="green-icon"
+              width={32}
+              height={32}
               className="h-6 w-6 sm:h-8 sm:w-8"
             />
           </p>
           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
             5000+ Innovators
-            <img
+            <Image
               src="/assets/images/group1.svg"
               alt="blue-icon"
+              width={32}
+              height={32}
               className="h-6 w-6 sm:h-8 sm:w-8"
             />
           </p>
         </div>
-
       </div>
     </section>
   );
 }
-
-
 
 
 
