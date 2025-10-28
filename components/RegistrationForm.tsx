@@ -1687,6 +1687,22 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 }
 
 /* ---------------- Reusable Modal Content ---------------- */
+interface ModalContentProps {
+  formData: FormFields;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
+  focusedField: string | null;
+  setFocusedField: React.Dispatch<React.SetStateAction<string | null>>;
+  getBoxStyle: (fieldName: string) => React.CSSProperties;
+  showOtherDistrictInput: boolean;
+  message: { type: "success" | "error"; text: string } | null;
+  handleSubmit: (e: React.FormEvent) => void;
+  loading: boolean;
+  onClose: () => void;
+  showSuccessModal: boolean;
+  setShowSuccessModal: React.Dispatch<React.SetStateAction<boolean>>;
+  modalWidth: string;
+}
+
 function ModalContent({
   formData,
   handleChange,
@@ -1701,7 +1717,8 @@ function ModalContent({
   showSuccessModal,
   setShowSuccessModal,
   modalWidth,
-}: any) {
+}: ModalContentProps) {
+
   return (
     <>
       <div className="flex flex-col">

@@ -320,7 +320,7 @@ export default function ScaleUpTheme() {
 {/* Grid items */}
 <div className="flex flex-col gap-10">
   {allItems.map((item) => (
-    <div key={item.number} className="flex items-start gap-10">
+    <div key={item.number} className="flex items-center gap-10">
       {/* Number block with fixed width */}
       <div className="flex items-center w-20">
         <Image
