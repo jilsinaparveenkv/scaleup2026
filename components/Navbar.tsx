@@ -509,7 +509,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="" style={{fontFamily:"Plus Jakarta Sans"}}>
       <nav
         className="w-full rounded-4xl px-4 sm:px-7 py-3 my-3 
                    border-t border-gray-200 
@@ -539,6 +539,8 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             <a
               href="https://2024.scaleupconclave.com/"
               className="underline font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               2024
             </a>
@@ -546,6 +548,8 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             <a
               href="https://scaleup2025.netlify.app/"
               className="underline font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               2025
             </a>
@@ -562,11 +566,13 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
 
           {/* Right Buttons (Desktop) */}
           <div className="hidden md:flex items-center gap-2">
-            <button className="px-3 py-1.5 sm:px-4 sm:py-2 border border-gray-400 text-gray-800 rounded-4xl hover:bg-blue-50 transition max-w-[120px] text-sm sm:text-base">
+            <button
+            onClick={() => setIsModalOpen(true)}
+             className="px-3 py-1.5 sm:px-4 sm:py-2 border border-gray-400 text-gray-800 rounded-4xl hover:bg-blue-50 transition max-w-[120px] text-sm sm:text-base">
               Book Stall
             </button>
             <button
-              onClick={() => setIsModalOpen(true)}
+              
               className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition max-w-[120px] text-sm sm:text-base"
             >
               Register
@@ -601,10 +607,14 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             </Link>
             <span className="font-semibold mt-1">Previous Editions</span>
             <div className="flex gap-2">
-              <a href="https://2024.scaleupconclave.com/" className="underline">
+              <a href="https://2024.scaleupconclave.com/" className="underline"
+              target="_blank"
+              rel="noopener noreferrer">
                 2024
               </a>
-              <a href="https://scaleup2025.netlify.app/" className="underline">
+              <a href="https://scaleup2025.netlify.app/" className="underline"
+              target="_blank"
+              rel="noopener noreferrer">
                 2025
               </a>
               <a

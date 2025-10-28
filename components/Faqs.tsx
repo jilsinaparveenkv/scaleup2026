@@ -314,39 +314,39 @@ function ScaleUpFAQs() {
   const faqs = [
     {
       id: 1,
-      question: "Why is Scaleup the best conference?",
+      question: "What is the purpose of the business conclave?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "The business conclave aims to provide a platform for entrepreneurs, investors, business enthusiasts, and studentsto share insights, learn from industry leaders, and network with like-minded professionals.",
     },
     {
       id: 2,
-      question: "How to launch a Startup in Scaleup?",
+      question: "How can startups benefit from participating in the conclave?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "Startups can gain valuable mentorship, present their ideas to potential investors, receive feedback, and build connections that could lead to funding and collaborations.",
     },
     {
       id: 3,
-      question: "When was Scaleup was founded?",
+      question: "Who can attend the business conclave?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "The event is open to entrepreneurs, investors, business professionals, students, and anyone interested in the business ecosystem.",
     },
     {
       id: 4,
-      question: "Who founded Scaleup Village?",
+      question: "Is there a registration fee for attending the conclave?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "There is no registration fee for general attendants. The Platinum membership fee is five thousand rupees. Kindly refer to the platinum section to know more details.",
     },
     {
       id: 5,
-      question: "Is Scaleup the future of the Mallapuram?",
+      question: "What types of sessions or activities can participants expect?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "Participants can expect keynote speeches, panel discussions, workshops, pitch competitions, networking sessions, and showcases of new-age technologies and solutions.",
     },
     {
       id: 6,
-      question: "Who are the Scaleup founders?",
+      question: "Will there be opportunities to network with investors and industry leaders?",
       answer:
-        "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat aute irure dolor",
+        "Yes, the conclave is designed to foster networking, providing ample opportunities to connect with investors, mentors, and other key industry players.",
     },
   ];
 
@@ -364,7 +364,7 @@ function ScaleUpFAQs() {
   };
 
   return (
-    <section className="container mx-auto px-4 py-12 space-y-12">
+    <section className="container mx-auto px-4 py-12 space-y-12" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full">
         {/* Left Image (for desktop) */}
@@ -388,7 +388,7 @@ function ScaleUpFAQs() {
             <img
               src={eventData.header.leftIcon}
               alt="About Icons"
-              className="w-16 h-auto"
+              className="w-35 h-auto"
             />
             <p
               className="font-normal font-plusJakartaSans text-[20px] leading-[30px] tracking-[0px] mt-2 px-4"
@@ -412,7 +412,7 @@ function ScaleUpFAQs() {
               <img
                 src={eventData.header.leftIcon}
                 alt="About Icons"
-                className="w-16 md:w-20 h-auto"
+                className="w-20 md:w-30 h-auto"
               />
             </div>
           </div>

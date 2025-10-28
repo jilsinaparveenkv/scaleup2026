@@ -340,7 +340,7 @@ export default function ScaleUpSection() {
   const images = imagesData[selectedFilter];
 
   return (
-    <section className="relative w-full py-16 px-6 md:px-16 max-w-full mx-auto" id="about">
+    <section className="relative w-full py-16 px-6 md:px-16 max-w-full mx-auto" id="about" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* ---------------- Desktop View ---------------- */}
       <div className="hidden md:flex flex-col md:flex-row items-start gap-12 md:gap-20 mb-12 w-full">
         {/* Left SVG */}
@@ -352,9 +352,9 @@ export default function ScaleUpSection() {
           />
           <div className="flex justify-center items-center mt-4">
             <img
-              src="/assets/images/abouticons.svg"
+              src="/assets/images/img_icon2.svg"
               alt="About Icons"
-              className="w-16 md:w-20 h-auto"
+              className="w-20 md:w-40 h-auto"
             />
           </div>
         </div>
@@ -446,9 +446,9 @@ export default function ScaleUpSection() {
 
         {/* Second Icons */}
         <img
-          src="/assets/images/abouticons.svg"
+          src="/assets/images/img_icon2.svg"
           alt="About Icons"
-          className="w-16 h-auto mx-auto"
+          className="w-35 h-auto mx-auto"
         />
 
         {/* Mobile Text */}

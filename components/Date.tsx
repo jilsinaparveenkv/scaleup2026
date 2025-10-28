@@ -491,7 +491,7 @@ export default function DateSection() {
   return (
     <section
       className="w-full px-4 sm:px-8 md:px-12 py-10"
-      style={{ backgroundColor: "var(--color-bg)" }}
+      style={{ backgroundColor: "var(--color-bg)",fontFamily:"Plus Jakarta Sans" }}
     >
       {/* ---------------- Desktop View ---------------- */}
       <div className="hidden md:flex flex-row items-center justify-between gap-10">

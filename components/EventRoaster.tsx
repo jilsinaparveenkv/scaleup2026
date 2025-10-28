@@ -407,50 +407,50 @@ import React from "react";
 const eventData = {
   header: {
     leftSvg: "/assets/images/06theme.svg",
-    leftIcon: "/assets/images/abouticons.svg",
+    leftIcon: "/assets/images/img_icon2.svg",
   },
   events: [
     {
       id: 1,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Discussions",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Engage in panel discussions with experts sharing insights, tackling challenges, and offering actionable ideas to drive growth and innovation",
     },
     {
       id: 2,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Expert Talks",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Hear from industry leaders sharing practical advice, experiences, and strategies to empower you with knowledge for personal and professional growth.",
     },
     {
       id: 3,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Workshops",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Join 50+ workshops covering technical skills, creativity, business strategies, and personal development, offering hands-on learning and expert guidance.",
     },
     {
       id: 4,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Startup JAM",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Startup Jam at ScaleUp Conclave 2025 is your chance to showcase your startup to thousands of spectators. Present your product or service, share your journey, and inspire others at Kerala's most exciting business event. Don't miss out!",
     },
     {
       id: 5,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Exhibitions",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Explore 50+ stalls showcasing innovations, services, and products. Discover opportunities and connect with industry leaders shaping the future.",
     },
     {
       id: 6,
       image: "/assets/images/themepic.jpg",
-      title: "Event name can be this long",
+      title: "Competitions",
       description:
-        "Description of the event here we can add, a few sentence is only required, a maximum of only this much line is required",
+        "Compete in Business Challenges, Live Pitch Battles, Drone Racing, and Stand-Up Comedy, showcasing creativity and talent for recognition and rewards",
     },
   ],
 };
@@ -459,7 +459,7 @@ function ScaleUpEventRoaster() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* ===== Header Section ===== */}
-      <section className="flex flex-col md:flex-row items-start gap-8 md:gap-10 mb-12 w-full">
+      <section className="flex flex-col md:flex-row items-start gap-8 md:gap-10 mb-12 w-full" style={{fontFamily:"Plus Jakarta Sans"}}>
         {/* ===== Mobile Layout ===== */}
         <div className="md:hidden flex flex-col items-center w-full gap-4">
           <img
@@ -471,7 +471,7 @@ function ScaleUpEventRoaster() {
           <img
             src={eventData.header.leftIcon}
             alt="About Icons"
-            className="w-16 h-auto mx-auto mt-4"
+            className="w-25 h-auto mx-auto mt-4"
           />
 
           {/* 👇 Left-aligned text */}
@@ -504,7 +504,7 @@ function ScaleUpEventRoaster() {
               <img
                 src={eventData.header.leftIcon}
                 alt="About Icons"
-                className="w-16 md:w-20 h-auto"
+                className="w-20 md:w-35 h-auto"
               />
             </div>
 

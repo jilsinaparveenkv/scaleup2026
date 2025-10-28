@@ -772,14 +772,14 @@ function ScaleUpSpeakers() {
   );
 
   return (
-    <div className="container mx-auto px-4 py-12 font-plusJakartaSans">
+    <div className="container mx-auto px-4 py-12 font-plusJakartaSans" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* ================= Desktop View ================= */}
       <div className="hidden md:flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full" id="speakers">
         {/* Text + Search */}
         <div className="flex-1 w-full md:w-2/3 space-y-6 mt-12">
           <p className="text-[28px] leading-[36px] mt-10" style={{ color: "#202020" }}>
-            ScaleUp Conclave hosted by ScaleUp Village, that brings together
-            entrepreneurs, investors, aspiring business leaders
+          ScaleUp 2026 brings diverse experts, leaders, innovators empowering entrepreneurs with global insights, collaboration, and unstoppable business growth.
+
           </p>
 
           <div className="relative flex justify-start mb-4 w-1/3">
@@ -854,8 +854,7 @@ function ScaleUpSpeakers() {
 
         {/* Description */}
         <p className="text-[24px] leading-[32px] text-start justify mb-6" style={{ color: "#202020" }}>
-          ScaleUp Conclave hosted by ScaleUp Village, that brings together
-          entrepreneurs, investors, aspiring business leaders
+        ScaleUp 2026 brings diverse experts, leaders, innovators empowering entrepreneurs with global insights, collaboration, and unstoppable business growth.
         </p>
 
         {/* Search Bar */}

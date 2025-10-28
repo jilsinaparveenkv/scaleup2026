@@ -30,6 +30,7 @@ export default function RegistrationSuccessfully({ isOpen, onClose }: ModalProps
         backdrop-blur-md bg-white/20
         z-50 transition-all duration-300
       "
+      style={{fontFamily:"Plus Jakarta Sans"}}
     >
       <div
         className="bg-white p-6 rounded-2xl shadow-2xl relative max-h-[90vh] overflow-y-auto"

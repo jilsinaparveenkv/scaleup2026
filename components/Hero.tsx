@@ -416,7 +416,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="w-full relative px-4 sm:px-6 md:px-12 py-4">
+    <section className="w-full relative px-4 sm:px-6 md:px-12 py-4" style={{fontFamily:"Plus Jakarta Sans"}}>
 
       {/* --- DESKTOP / TABLET VIEW --- */}
       <div className="hidden md:block">

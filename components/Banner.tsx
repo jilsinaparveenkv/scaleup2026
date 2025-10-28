@@ -86,7 +86,7 @@ function Banner() {
     <div className="p-6">
       <section
         className="w-full rounded-2xl max-w-8xl mx-auto flex flex-col md:flex-row items-center justify-between overflow-hidden"
-        style={{ backgroundColor: "#202020" }}
+        style={{ backgroundColor: "#202020",fontFamily:"Plus Jakarta Sans" }}
       >
         {/* Left Content */}
         <div className="flex flex-col gap-6 md:w-1/2">
