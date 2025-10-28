@@ -494,10 +494,10 @@ export default function DateSection() {
       style={{ backgroundColor: "var(--color-bg)",fontFamily:"Plus Jakarta Sans" }}
     >
       {/* ---------------- Desktop View ---------------- */}
-      <div className="hidden md:flex flex-row items-center justify-between gap-10">
+      <div className="hidden md:flex flex-row items-center justify-between gap-8">
         {/* Stats Section (Left) */}
         <div
-          className="font-gilmer leading-[85.97px] text-[60px] text-left"
+          className="font-gilmer leading-[70px] text-[60px] text-left"
           style={{ color: "var(--color-text)", fontWeight: "600" }}
         >
           <p className="flex items-center gap-2">
