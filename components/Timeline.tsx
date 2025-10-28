@@ -699,10 +699,10 @@ export default function ScaleUpTimeline() {
           padding: isMobile ? "6px" : "16px",
         }}
       >
-        <p
-          style={{
-            fontSize: isMobile ? "12px" : "14px",
-            lineHeight: isMobile ? "18px" : "20px",
+         <p
+        style={{
+          fontSize: isMobile ? "10px" : "14px", //  smaller for mobile
+          lineHeight: isMobile ? "10px" : "20px", //  tighter line height
             fontFamily: "Plus Jakarta Sans",
           }}
         >
@@ -712,7 +712,7 @@ export default function ScaleUpTimeline() {
         {"location" in card && card.location && (
             <p
               style={{
-                fontSize: isMobile ? "10px" : "12px",
+                fontSize: isMobile ? "9px" : "12px", //  slightly smaller
                 fontWeight: 700,
                 color: "#E052FF",
                 opacity: 0.7,
@@ -723,7 +723,7 @@ export default function ScaleUpTimeline() {
           )}
           <h3
             style={{
-              fontSize: isMobile ? "14px" : "2.5rem",
+              fontSize: isMobile ? "9px" : "2.5rem", //  smaller year text on mobile
               fontWeight: 700,
               color:
                 index === 0
@@ -758,7 +758,7 @@ export default function ScaleUpTimeline() {
     );
 
   return (
-    <section className="relative w-full px-4 sm:px-8 md:px-16 py-12 md:py-16 bg-white overflow-hidden" style={{fontFamily:"Plus Jakarta Sans"}}>
+    <section className="relative w-full px-4 sm:px-2 md:px-16 py-12 md:py-16 bg-white overflow-hidden" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* Top text + SVG */}
       <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 w-full">
         {/* Right text */}
@@ -786,7 +786,7 @@ export default function ScaleUpTimeline() {
       {isMobile ? (
         <>
           {/* ----------------- MOBILE LAYOUT ----------------- */}
-          <div className="flex flex-wrap justify-center gap-0 mt-0">
+          {/* <div className="flex flex-wrap justify-center gap-0 mt-0">
             {cardsRow1.slice(0, 3).map((card, i) =>
               renderCard(card, "110px", "140px", i, true)
             )}
@@ -805,8 +805,32 @@ export default function ScaleUpTimeline() {
             {cardsRow2.slice(3, 6).map((card, i) =>
               renderCard(card, "110px", "140px", i, true)
             )}
-          </div>
+          </div> */}
+
+
+<div className="flex flex-wrap justify-center gap-0 mt-0">
+  {cardsRow1.slice(0, 3).map((card, i) =>
+    renderCard(card, "110px", "140px", i, true)
+  )}
+</div>
+<div className="flex flex-wrap justify-center gap-0 mt-0">
+  {cardsRow1.slice(3, 6).map((card, i) =>
+    renderCard(card, "110px", "140px", i + 3, true) // 👈 added +3
+  )}
+</div>
+<div className="flex flex-wrap justify-center gap-0 mt-0">
+  {cardsRow2.slice(0, 3).map((card, i) =>
+    renderCard(card, "110px", "140px", i, true)
+  )}
+</div>
+<div className="flex flex-wrap justify-center gap-0 mt-0">
+  {cardsRow2.slice(3, 6).map((card, i) =>
+    renderCard(card, "110px", "140px", i + 3, true) // 👈 added +3
+  )}
+</div>
         </>
+
+
       ) : (
         <>
           {/* ----------------- DESKTOP LAYOUT ----------------- */}

@@ -546,6 +546,7 @@ export default function DateSection() {
                 >
                   {value}
                 </span>
+                <div className="p-3 -mt-10"style={{backgroundColor:"white"}}>
                 <span
                   className="border rounded-full px-14 py-1 -mt-10 text-base"
                   style={{
@@ -556,6 +557,7 @@ export default function DateSection() {
                 >
                   {label}
                 </span>
+                </div>
               </div>
             ))}
           </div>
@@ -584,6 +586,7 @@ export default function DateSection() {
                 >
                   {value}
                 </span>
+                <div className="p-2 -mt-10"style={{backgroundColor:"white"}}>
                 <span
                   className="border rounded-full sm:px-6 px-5 py-1 sm:py-1 -mt-8 sm:-mt-2 text-xs sm:text-sm"
                   style={{
@@ -594,6 +597,7 @@ export default function DateSection() {
                 >
                   {label}
                 </span>
+                </div>
               </div>
             ))}
           </div>
