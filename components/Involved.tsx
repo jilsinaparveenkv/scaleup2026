@@ -196,11 +196,20 @@ function Involved() {
             }}
           >
             <div>
+            <div className="relative inline-block">
               <div
                 className={`h-10 w-10 rounded-lg flex items-center justify-center ${
                   isHovered ? "bg-green-300" : "bg-blue-500"
                 }`}
-              ></div>
+              ></div><img
+              src={card.icon}
+              style={{
+                filter: isHovered ? "none" : "brightness(0) invert(1)",
+              }}
+              alt={card.title}
+              className="absolute inset-0 m-auto h-6 w-6"
+            />
+            </div>
 
               <h3 className="mt-6 text-lg font-bold">{card.title}</h3>
               <p className="mt-2 text-base">{card.description}</p>
