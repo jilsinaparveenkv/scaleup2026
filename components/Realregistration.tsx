@@ -617,7 +617,7 @@ function RegistrationForm({
             <option value="" disabled>
               Select a category
             </option>
-            <option value="Startup">Startup</option>
+            <option value="Startup">Startup</option>  
             <option value="Investor">Investor</option>
             <option value="Mentor">Mentor</option>
             <option value="Student">Student</option>
@@ -739,7 +739,7 @@ function TicketTypeModal({
             <div className="flex flex-col h-full justify-between">
               <div>
                 <p className="text-lg font-bold text-gray-900 mb-1">General Pass</p>
-                <p className="text-sm font-medium text-gray-600">Free</p>
+            
               </div>
               <p 
                 className={`text-2xl font-black transition-colors ${
@@ -772,7 +772,7 @@ function TicketTypeModal({
             <div className="flex flex-col h-full justify-between">
               <div>
                 <p className="text-lg font-bold text-gray-900 mb-1">VIP Pass</p>
-                <p className="text-sm font-medium text-gray-600">₹ 10,000</p>
+              
               </div>
               <p className="text-2xl font-black text-gray-900">
                 ₹ 10,000

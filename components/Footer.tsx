@@ -39,7 +39,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full mt-24 px-1 md:px-2">
+    <footer className="w-full mt-24 sm:px-5 md:px-5 lg:px-4 py-0 md:py-0">
       <div
         className="relative mx-auto mb-6 max-w-10xl rounded-3xl overflow-hidden"
         style={{ backgroundColor: "#202020", color: "#FFFFFF" }}

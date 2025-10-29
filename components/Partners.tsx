@@ -82,7 +82,7 @@ export default function PartnersSection() {
       {/* Heading */}
       <div className="text-center mb-12">
         <div
-          className="inline-flex w-[290px] h-[70px] items-center justify-center border rounded-xl shadow-md"
+          className="inline-flex w-[290px] h-[70px] items-center justify-center border rounded-xl "
           style={{ borderColor: "#000000" }}
         >
           <span

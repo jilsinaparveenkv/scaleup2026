@@ -27,6 +27,11 @@ import { ChevronRight } from 'lucide-react';
 
 export default function DepositMarquee() {
   return (
+
+
+
+
+    <div className='px-2 md:px-10'>
     <div
       className="w-full rounded-3xl p-2 flex items-center "
       style={{ backgroundColor: '#00D28A', color: 'var(--color-black)' }}
@@ -41,16 +46,17 @@ export default function DepositMarquee() {
       <div className="flex-1 overflow-hidden ml-4">
         <Marquee gradient={false} speed={50} direction="right">
           <span className="mr-8">
-            17000+ Total attendees // 900+ Local Business Heroes // 150+ Educational Institutions // 200+ Keynote Speakers // 30+ Investors in Attendance
+            17000+ Total attendees | 900+ Local Business Heroes | 150+ Educational Institutions | 200+ Keynote Speakers | 30+ Investors in Attendance
           </span>
           <span className="mr-8">
-            17000+ Total attendees // 900+ Local Business Heroes // 150+ Educational Institutions // 200+ Keynote Speakers // 30+ Investors in Attendance
+            17000+ Total attendees | 900+ Local Business Heroes | 150+ Educational Institutions | 200+ Keynote Speakers | 30+ Investors in Attendance
           </span>
           <span className="mr-8">
-            17000+ Total attendees // 900+ Local Business Heroes // 150+ Educational Institutions // 200+ Keynote Speakers // 30+ Investors in Attendance
+          17000+ Total attendees | 900+ Local Business Heroes | 150+ Educational Institutions | 200+ Keynote Speakers | 30+ Investors in Attendance
           </span>
         </Marquee>
       </div>
+    </div>
     </div>
   );
 }

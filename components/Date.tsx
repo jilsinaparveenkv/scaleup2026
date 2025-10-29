@@ -445,10 +445,10 @@
 "use client";
 
 import React, { useEffect, useState, useMemo } from "react";
-import Image from "next/image"; // ✅ use next/image for optimization
+import Image from "next/image"; // use next/image for optimization
 
 export default function DateSection() {
-  // ✅ useMemo to ensure the Date object is stable across renders
+  //  useMemo to ensure the Date object is stable across renders
   const targetDate = useMemo(() => new Date("2026-01-17T09:00:00"), []);
 
   const [timeLeft, setTimeLeft] = useState({
@@ -486,7 +486,7 @@ export default function DateSection() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]); // ✅ safe now since targetDate is memoized
+  }, [targetDate]); //  safe now since targetDate is memoized
 
   return (
     <section
@@ -572,81 +572,82 @@ export default function DateSection() {
 
       {/* ---------------- Mobile View ---------------- */}
       <div className="flex flex-col md:hidden items-center justify-center gap-6">
-        {/* Timer Section (Top) */}
-        <div className="font-gilmer text-center w-full">
-          <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
-            {Object.entries(timeLeft).map(([label, value], index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center min-w-[70px]"
-              >
-                <span
-                  className="font-sans font-normal text-[70px] sm:text-[90px] leading-[90px] sm:leading-[110px]"
-                  style={{ color: "#000000" }}
-                >
-                  {value}
-                </span>
-                <div className="p-2 -mt-10"style={{backgroundColor:"white"}}>
-                <span
-                  className="border rounded-full sm:px-6 px-5 py-1 sm:py-1 -mt-8 sm:-mt-2 text-xs sm:text-sm"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderColor: "#000000",
-                    color: "#000000",
-                  }}
-                >
-                  {label}
-                </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p
-            className="font-gilmer mt-3 text-xs sm:text-sm"
-            style={{ color: "#4B5563" }}
-          >
-            Kerala&apos;s biggest AI & Technology Conclave
-          </p>
-        </div>
-
-        {/* Stats Section (Below) */}
+  {/* Timer Section (Top) */}
+  <div className="font-gilmer text-center w-full">
+    <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
+      {Object.entries(timeLeft).map(([label, value], index) => (
         <div
-          className="font-gilmer leading-[42px] text-2xl sm:text-3xl text-left w-full px-4"
-          style={{ color: "var(--color-text)", fontWeight: "600" }}
+          key={index}
+          className="flex flex-col items-center min-w-[60px]" // smaller width
         >
-          <p className="flex items-center gap-2 text-3xl sm:text-4xl">
-            2 Days
-            <Image
-              src="/assets/images/repeat.svg"
-              alt="rose-icon"
-              width={32}
-              height={32}
-              className="h-6 w-6 sm:h-8 sm:w-8"
-            />
-          </p>
-          <p className="flex items-center gap-2 text-3xl sm:text-4xl">
-            50+ Speakers
-            <Image
-              src="/assets/images/union.svg"
-              alt="green-icon"
-              width={32}
-              height={32}
-              className="h-6 w-6 sm:h-8 sm:w-8"
-            />
-          </p>
-          <p className="flex items-center gap-2 text-3xl sm:text-4xl">
-            5000+ Innovators
-            <Image
-              src="/assets/images/group1.svg"
-              alt="blue-icon"
-              width={32}
-              height={32}
-              className="h-6 w-6 sm:h-8 sm:w-8"
-            />
-          </p>
+          <span
+            className="font-sans font-normal text-[48px] sm:text-[64px] leading-[60px] sm:leading-[80px]" // ↓ reduced from 70/90
+            style={{ color: "#000000" }}
+          >
+            {value}
+          </span>
+          <div className="p-2 -mt-6" style={{ backgroundColor: "white" }}>
+            <span
+              className="border rounded-full sm:px-5 px-4 py-1 sm:py-1 -mt-4 sm:-mt-2 text-[10px] sm:text-xs" // smaller label
+              style={{
+                backgroundColor: "#FFFFFF",
+                borderColor: "#000000",
+                color: "#000000",
+              }}
+            >
+              {label}
+            </span>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+
+    <p
+      className="font-gilmer mt-2 text-[10px] sm:text-xs"
+      style={{ color: "#4B5563" }}
+    >
+      Kerala&apos;s biggest AI & Technology Conclave
+    </p>
+  </div>
+
+  {/* Stats Section (Below) */}
+  <div
+    className="font-gilmer leading-[32px] text-xl sm:text-2xl text-left w-full px-4"
+    style={{ color: "var(--color-text)", fontWeight: "600" }}
+  >
+    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+      2 Days
+      <Image
+        src="/assets/images/repeat.svg"
+        alt="rose-icon"
+        width={24}
+        height={24}
+        className="h-5 w-5 sm:h-6 sm:w-6"
+      />
+    </p>
+    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+      50+ Speakers
+      <Image
+        src="/assets/images/union.svg"
+        alt="green-icon"
+        width={24}
+        height={24}
+        className="h-5 w-5 sm:h-6 sm:w-6"
+      />
+    </p>
+    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+      5000+ Innovators
+      <Image
+        src="/assets/images/group1.svg"
+        alt="blue-icon"
+        width={24}
+        height={24}
+        className="h-5 w-5 sm:h-6 sm:w-6"
+      />
+    </p>
+  </div>
+</div>
+
     </section>
   );
 }

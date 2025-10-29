@@ -400,6 +400,176 @@
 
 // mobile
 
+// "use client";
+
+// import React from "react";
+
+// const eventData = {
+//   header: {
+//     leftSvg: "/assets/images/06theme.svg",
+//     leftIcon: "/assets/images/img_icon2.svg",
+//   },
+//   events: [
+//     {
+//       id: 1,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Discussions",
+//       description:
+//         "Engage in panel discussions with experts sharing insights, tackling challenges, and offering actionable ideas to drive growth and innovation",
+//     },
+//     {
+//       id: 2,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Expert Talks",
+//       description:
+//         "Hear from industry leaders sharing practical advice, experiences, and strategies to empower you with knowledge for personal and professional growth.",
+//     },
+//     {
+//       id: 3,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Workshops",
+//       description:
+//         "Join 50+ workshops covering technical skills, creativity, business strategies, and personal development, offering hands-on learning and expert guidance.",
+//     },
+//     {
+//       id: 4,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Startup JAM",
+//       description:
+//         "Startup Jam at ScaleUp Conclave 2025 is your chance to showcase your startup to thousands of spectators. Present your product or service, share your journey, and inspire others at Kerala's most exciting business event. Don't miss out!",
+//     },
+//     {
+//       id: 5,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Exhibitions",
+//       description:
+//         "Explore 50+ stalls showcasing innovations, services, and products. Discover opportunities and connect with industry leaders shaping the future.",
+//     },
+//     {
+//       id: 6,
+//       image: "/assets/images/themepic.jpg",
+//       title: "Competitions",
+//       description:
+//         "Compete in Business Challenges, Live Pitch Battles, Drone Racing, and Stand-Up Comedy, showcasing creativity and talent for recognition and rewards",
+//     },
+//   ],
+// };
+
+// function ScaleUpEventRoaster() {
+//   return (
+//     <div className="container mx-auto px-4 py-8">
+//       {/* ===== Header Section ===== */}
+//       <section className="flex flex-col md:flex-row items-start gap-8 md:gap-10 mb-12 w-full" style={{fontFamily:"Plus Jakarta Sans"}}>
+//         {/* ===== Mobile Layout ===== */}
+//         <div className="md:hidden flex flex-col items-center w-full gap-4">
+//           <img
+//             src={eventData.header.leftSvg}
+//             alt="About ScaleUp"
+//             className="w-[80%] h-auto mx-auto"
+//           />
+
+//           <img
+//             src={eventData.header.leftIcon}
+//             alt="About Icons"
+//             className="w-25 h-auto mx-auto mt-4"
+//           />
+
+//           {/* 👇 Left-aligned text */}
+//           <p
+//             className="font-normal text-[20px] leading-[30px] tracking-[0px] mt-4 text-left px-4"
+//             style={{
+//               color: "#202020",
+//               fontFamily: "Plus Jakarta Sans",
+//             }}
+//           >
+//            Discussions, expert talks, workshops, Startup JAM, exhibitions, competitions uniting entrepreneurs to learn, collaborate, and grow globally together.
+//           </p>
+//         </div>
+
+//         {/* ===== Desktop Layout ===== */}
+//         <div className="hidden md:flex flex-row items-start gap-10 w-full">
+//           {/* Left SVG - 35% */}
+//           <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col gap-4">
+//             <img
+//               src={eventData.header.leftSvg}
+//               alt="About ScaleUp"
+//               className="w-[410px] h-auto"
+//             />
+//           </div>
+
+//           {/* Right Text - 65% */}
+//           <div className="flex-1 w-full md:w-2/3 space-y-6 mt-12">
+//             <div className="flex justify-end items-center mb-4">
+//               <img
+//                 src={eventData.header.leftIcon}
+//                 alt="About Icons"
+//                 className="w-20 md:w-35 h-auto"
+//               />
+//             </div>
+
+//             <p
+//               className="font-normal text-[28px] leading-[36px] tracking-[0px] mt-10 text-left"
+//               style={{
+//                 color: "#202020",
+//                 fontFamily: "Plus Jakarta Sans",
+//               }}
+//             >
+//              Discussions, expert talks, workshops, Startup JAM, exhibitions, competitions uniting entrepreneurs to learn, collaborate, and grow globally together.
+//             </p>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* ===== Cards Section ===== */}
+//       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+//         {eventData.events.map((event) => (
+//           <div
+//             key={event.id}
+//             className="rounded-[15.72px] shadow-md overflow-hidden flex flex-col border border-[1.04px] bg-white w-full sm:w-[417.27px] h-[417.27px]"
+//             style={{
+//               borderColor: "#000000",
+//               fontFamily: "Plus Jakarta Sans",
+//               opacity: 1,
+//             }}
+//           >
+//             {/* Text Content */}
+//             <div className="p-4 flex flex-col justify-between h-1/2">
+//               <p
+//                 className="text-4xl font-semibold mb-0.5"
+//                 style={{
+//                   color: "#111111",
+//                   fontFamily: "Plus Jakarta Sans",
+//                 }}
+//               >
+//                 {event.title}
+//               </p>
+//               <p
+//                 style={{
+//                   color: "#090909",
+//                   fontFamily: "Plus Jakarta Sans",
+//                 }}
+//               >
+//                 {event.description}
+//               </p>
+//             </div>
+
+//             {/* Image Top */}
+//             <img
+//               src={event.image}
+//               alt={`Event ${event.id}`}
+//               className="w-full h-1/2 object-cover"
+//             />
+//           </div>
+//         ))}
+//       </section>
+//     </div>
+//   );
+// }
+
+// export default ScaleUpEventRoaster;
+
+
+
 "use client";
 
 import React from "react";
@@ -457,35 +627,61 @@ const eventData = {
 
 function ScaleUpEventRoaster() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <section
+      className="relative w-full py-16 px-6 md:px-16 max-w-full mx-auto font-plusJakartaSans"
+      id="event-roaster"
+      style={{ fontFamily: "Plus Jakarta Sans" }}
+    >
       {/* ===== Header Section ===== */}
-      <section className="flex flex-col md:flex-row items-start gap-8 md:gap-10 mb-12 w-full" style={{fontFamily:"Plus Jakarta Sans"}}>
+      <section className="flex flex-col md:flex-row items-start gap-8 md:gap-10 mb-12 w-full">
         {/* ===== Mobile Layout ===== */}
-        <div className="md:hidden flex flex-col items-center w-full gap-4">
+        {/* <div className="md:hidden flex flex-col items-center w-full gap-4"> */}
+        <div className="block lg:hidden ">
+        <div className="flex justify-center mt-6 mb-4">
           <img
             src={eventData.header.leftSvg}
             alt="About ScaleUp"
-            className="w-[80%] h-auto mx-auto"
+            className="w-[55%] max-w-[180px] h-auto"
           />
+</div>
+
+{/* <div className="flex justify-center mt-6 mb-4">
+    <img
+      src="/assets/images/05speakers.svg"
+      alt="About ScaleUp"
+      className="w-[55%] max-w-[180px] h-auto"
+    />
+  </div> */}
 
           <img
             src={eventData.header.leftIcon}
             alt="About Icons"
             className="w-25 h-auto mx-auto mt-4"
           />
-
-          {/* 👇 Left-aligned text */}
+<div className="flex justify-start mb-6 px-2">
           <p
-            className="font-normal text-[20px] leading-[30px] tracking-[0px] mt-4 text-left px-4"
-            style={{
-              color: "#202020",
-              fontFamily: "Plus Jakarta Sans",
-            }}
+            className="text-[18px] leading-[28px] mt-5 text-start -mb-5 px-5"
+            style={{ color: "#202020" }}
           >
-            ScaleUp Conclave hosted by ScaleUp Village, that brings together
-            entrepreneurs, investors, aspiring business leaders
+            Discussions, expert talks, workshops, Startup JAM, exhibitions,
+            competitions uniting entrepreneurs to learn, collaborate, and grow
+            globally together.
           </p>
+          </div>
         </div>
+
+
+
+        {/* <div className="flex justify-start mb-6 px-2">
+  <p
+    className="text-[18px] leading-[28px] text-start mb-6 px-5"
+    style={{ color: "#202020" }}
+  >
+    ScaleUp 2026 brings diverse experts, leaders, innovators empowering
+    entrepreneurs with global insights, collaboration, and unstoppable
+    business growth.
+  </p>
+  </div> */}
 
         {/* ===== Desktop Layout ===== */}
         <div className="hidden md:flex flex-row items-start gap-10 w-full">
@@ -494,7 +690,7 @@ function ScaleUpEventRoaster() {
             <img
               src={eventData.header.leftSvg}
               alt="About ScaleUp"
-              className="w-full h-auto"
+              className="w-[410px] h-auto"
             />
           </div>
 
@@ -510,61 +706,50 @@ function ScaleUpEventRoaster() {
 
             <p
               className="font-normal text-[28px] leading-[36px] tracking-[0px] mt-10 text-left"
-              style={{
-                color: "#202020",
-                fontFamily: "Plus Jakarta Sans",
-              }}
+              style={{ color: "#202020" }}
             >
-              ScaleUp Conclave hosted by ScaleUp Village, that brings together
-              entrepreneurs, investors, aspiring business leaders
+              Discussions, expert talks, workshops, Startup JAM, exhibitions,
+              competitions uniting entrepreneurs to learn, collaborate, and grow
+              globally together.
             </p>
           </div>
         </div>
       </section>
 
       {/* ===== Cards Section ===== */}
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
-        {eventData.events.map((event) => (
-          <div
-            key={event.id}
-            className="rounded-[15.72px] shadow-md overflow-hidden flex flex-col border border-[1.04px] bg-white w-full sm:w-[417.27px] h-[417.27px]"
-            style={{
-              borderColor: "#000000",
-              fontFamily: "Plus Jakarta Sans",
-              opacity: 1,
-            }}
-          >
-            {/* Text Content */}
-            <div className="p-4 flex flex-col justify-between h-1/2">
-              <h3
-                className="text-lg font-semibold mb-0.5"
-                style={{
-                  color: "#111111",
-                  fontFamily: "Plus Jakarta Sans",
-                }}
-              >
-                {event.title}
-              </h3>
-              <p
-                style={{
-                  color: "#090909",
-                  fontFamily: "Plus Jakarta Sans",
-                }}
-              >
-                {event.description}
-              </p>
-            </div>
+      <section className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 w-full">
+          {eventData.events.map((event) => (
+            <div
+              key={event.id}
+              className="rounded-[15.72px] shadow-md overflow-hidden flex flex-col border border-[1.04px] bg-white w-full h-[417.27px]"
+              style={{
+                borderColor: "#000000",
+                fontFamily: "Plus Jakarta Sans",
+              }}
+            >
+              {/* Text Content */}
+              <div className="p-4 flex flex-col justify-between h-1/2">
+                <p
+                  className="text-4xl font-semibold mb-0.5"
+                  style={{ color: "#111111" }}
+                >
+                  {event.title}
+                </p>
+                <p style={{ color: "#090909" }}>{event.description}</p>
+              </div>
 
-            {/* Image Top */}
-            <img
-              src={event.image}
-              alt={`Event ${event.id}`}
-              className="w-full h-1/2 object-cover"
-            />
-          </div>
-        ))}
+              {/* Image */}
+              <img
+                src={event.image}
+                alt={`Event ${event.id}`}
+                className="w-full h-1/2 object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </section>
-    </div>
+    </section>
   );
 }
 

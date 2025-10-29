@@ -312,24 +312,24 @@ interface ImageItem {
 
 const imagesData: Record<string, ImageItem[]> = {
   Dubai: [
-    { id: 1, src: "/assets/images/cards/a3.png", alt: "Dubai Image 1" },
-    { id: 2, src: "/assets/images/cards/a5.png", alt: "Dubai Image 2" },
-    { id: 3, src: "/assets/images/cards/a4.png", alt: "Dubai Image 3" },
+    { id: 1, src: "/assets/images/cards/dubai1.jpg", alt: "Dubai Image 1" },
+    { id: 2, src: "/assets/images/cards/dubai2.jpg", alt: "Dubai Image 2" },
+    { id: 3, src: "/assets/images/cards/dubai3.jpg", alt: "Dubai Image 3" },
   ],
   "2025": [
-    { id: 1, src: "/assets/images/cards/a1.png", alt: "2025 Image 1" },
-    { id: 2, src: "/assets/images/cards/a5.png", alt: "2025 Image 2" },
-    { id: 3, src: "/assets/images/cards/a2.png", alt: "2025 Image 3" },
+    { id: 1, src: "/assets/images/cards/2025_2.jpg", alt: "2025 Image 1" },
+    { id: 2, src: "/assets/images/cards/2025_1.jpg", alt: "2025 Image 2" },
+    { id: 3, src: "/assets/images/cards/2025_3.jpg", alt: "2025 Image 3" },
   ],
   "2024": [
-    { id: 1, src: "/assets/images/cards/a2.png", alt: "2024 Image 1" },
-    { id: 2, src: "/assets/images/cards/a5.png", alt: "2024 Image 2" },
-    { id: 3, src: "/assets/images/cards/a4.png", alt: "2024 Image 3" },
+    { id: 1, src: "/assets/images/cards/2024_1.jpg", alt: "2024 Image 1" },
+    { id: 2, src: "/assets/images/cards/2024_2.jpg", alt: "2024 Image 2" },
+    { id: 3, src: "/assets/images/cards/2024_3.jpg", alt: "2024 Image 3" },
   ],
   All: [
-    { id: 1, src: "/assets/images/cards/a3.png", alt: "Dubai Image 1" },
-    { id: 2, src: "/assets/images/cards/a2.png", alt: "Dubai Image 2" },
-    { id: 3, src: "/assets/images/cards/a4.png", alt: "Dubai Image 3" },
+    { id: 1, src: "/assets/images/cards/all_1.jpg", alt: "Dubai Image 1" },
+    { id: 2, src: "/assets/images/cards/all_2.jpg", alt: "Dubai Image 2" },
+    { id: 3, src: "/assets/images/cards/all_3.jpg", alt: "Dubai Image 3" },
   ],
 };
 
@@ -340,15 +340,15 @@ export default function ScaleUpSection() {
   const images = imagesData[selectedFilter];
 
   return (
-    <section className="relative w-full py-16 px-6 md:px-16 max-w-full mx-auto" id="about" style={{fontFamily:"Plus Jakarta Sans"}}>
+    <section className="relative w-full py-8 px-6 md:px-16 max-w-full mx-auto" id="about" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* ---------------- Desktop View ---------------- */}
-      <div className="hidden md:flex flex-col md:flex-row items-start gap-12 md:gap-20 mb-12 w-full">
+      <div className="hidden md:flex flex-col md:flex-row justify-start items-start gap-12 ml-0 md:gap-20 mb-12 w-full">
         {/* Left SVG */}
-        <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col gap-4">
+        <div className="flex-shrink-0 justify-start w-full md:w-1/3 flex flex-col gap-4 ml-0">
           <img
             src="/assets/images/03about.svg"
             alt="About ScaleUp"
-            className="w-full h-auto"
+            className="w-full h-[190px]"
           />
           <div className="flex justify-center items-center mt-4">
             <img
@@ -360,7 +360,7 @@ export default function ScaleUpSection() {
         </div>
 
         {/* Right Text */}
-        <div className="flex-1 w-full md:w-2/3 space-y-6 mt-12">
+        <div className="flex-1 w-full md:w-2/3 space-y-6 mt-0">
           <p
             style={{ color: "#202020" }}
             className="font-plusJakartaSans font-normal text-[27.95px] leading-[36px] tracking-[0px]"
@@ -438,11 +438,23 @@ export default function ScaleUpSection() {
       {/* ---------------- Mobile View ---------------- */}
       <div className="flex flex-col md:hidden gap-6">
         {/* First SVG */}
+        <div className="flex justify-center mt-6 mb-4">
         <img
           src="/assets/images/03about.svg"
           alt="About ScaleUp"
-          className="w-full h-auto"
+          className="w-[55%] max-w-[180px] h-auto"
         />
+        </div>
+
+
+{/* <div className="flex justify-center mt-6 mb-4">
+            <img
+              src="/assets/images/04timeline.svg"
+              alt="About ScaleUp"
+              className="w-[55%] max-w-[180px] h-auto"
+            />
+          </div> */}
+
 
         {/* Second Icons */}
         <img
@@ -499,9 +511,15 @@ export default function ScaleUpSection() {
 {/* Mobile Filter Buttons */}
 <div className="-mt-10 px-2">
   <div
-    className="flex gap-2 flex-nowrap border rounded-2xl backdrop-blur-md p-2 overflow-x-auto"
-    style={{ background: "#FFFFFF2A", borderColor: "rgba(255,255,255,0.2)" }}
+    className="flex gap-2 flex-nowrap border rounded-2xl backdrop-blur-md p-2 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+    style={{ background: "#FFFFFF2A", borderColor: "rgba(255,255,255,0.2)" ,WebkitOverflowScrolling: "touch"}}
   >
+
+
+{/* className="scroll-container flex overflow-x-auto space-x-4 pb-6 snap-x snap-mandatory scroll-smooth scrollbar-hide"
+    style={{ background: "#FFFFFF2A", borderColor: "rgba(255,255,255,0.2)",WebkitOverflowScrolling: "touch" }} */}
+
+
     {filters.map((filter) => (
       <Button
         key={filter}

@@ -364,7 +364,7 @@ function ScaleUpFAQs() {
   };
 
   return (
-    <section className="container mx-auto px-4 py-12 space-y-12" style={{fontFamily:"Plus Jakarta Sans"}}>
+    <section className="relative w-full px-6 md:px-16 max-w-full font-plusJakartaSans container mx-auto -px-10 py-12 space-y-12"  style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* Header Section */}
       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full">
         {/* Left Image (for desktop) */}
@@ -392,27 +392,36 @@ function ScaleUpFAQs() {
             />
             <p
               className="font-normal font-plusJakartaSans text-[20px] leading-[30px] tracking-[0px] mt-2 px-4"
-              style={{ color: "#202020" }}
+              style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
             >
-              ScaleUp Conclave hosted by ScaleUp Village, that brings together
-              entrepreneurs, investors, aspiring business leaders
+              Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
             </p>
+
+
+
+
+
+
+
+
+
+
+            
           </div>
 
           {/* --- DESKTOP VIEW --- */}
           <div className="hidden md:flex flex-col space-y-6 mt-10">
             <p
-              className="font-normal font-plusJakartaSans text-[28px] leading-[36px] tracking-[0px]"
-              style={{ color: "#202020" }}
+              className="font-normal font-plusJakartaSans mt-13 text-[28px] leading-[36px] tracking-[0px]"
+              style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
             >
-              ScaleUp Conclave hosted by ScaleUp Village, that brings together
-              entrepreneurs, investors, aspiring business leaders
+              Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
             </p>
-            <div className="flex justify-end items-center">
+            <div className="flex justify-end md:-mt-10 items-center">
               <img
                 src={eventData.header.leftIcon}
                 alt="About Icons"
-                className="w-20 md:w-30 h-auto"
+                className="w-20 md:w-25 h-auto"
               />
             </div>
           </div>
@@ -420,17 +429,39 @@ function ScaleUpFAQs() {
       </div>
 
       {/* FAQ Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {faqs.map((faq) => (
-          <FAQCard
-            key={faq.id}
-            question={faq.question}
-            answer={faq.answer}
-            isOpen={openFAQ === faq.id}
-            onClick={() => handleToggle(faq.id)}
-          />
-        ))}
-      </div>
+      {/* FAQ Section */}
+<div className="flex flex-col md:flex-row gap-6">
+  {/* Left Column */}
+  <div className="flex-1 flex flex-col gap-6">
+    {faqs
+      .filter((_, i) => i % 2 === 0) // even-indexed FAQs
+      .map((faq) => (
+        <FAQCard
+          key={faq.id}
+          question={faq.question}
+          answer={faq.answer}
+          isOpen={openFAQ === faq.id}
+          onClick={() => handleToggle(faq.id)}
+        />
+      ))}
+  </div>
+
+  {/* Right Column */}
+  <div className="flex-1 flex flex-col gap-6">
+    {faqs
+      .filter((_, i) => i % 2 !== 0) // odd-indexed FAQs
+      .map((faq) => (
+        <FAQCard
+          key={faq.id}
+          question={faq.question}
+          answer={faq.answer}
+          isOpen={openFAQ === faq.id}
+          onClick={() => handleToggle(faq.id)}
+        />
+      ))}
+  </div>
+</div>
+
     </section>
   );
 }
