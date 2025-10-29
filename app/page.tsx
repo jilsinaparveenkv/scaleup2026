@@ -310,7 +310,7 @@ import Timeline from "@/components/Timeline";
 import { useState, useEffect, useRef } from "react";
 // import { Whatsapp } from "@/components/Whatsapp";
 import Modal from "@/components/RegistrationForm";
-// import { Whatsapp } from "@/components/Whatsapp";
+import { Whatsapp } from "@/components/Whatsapp";
 // import { Whatsapp } from "@/components/Whatsapp";
 
 export default function Home() {
@@ -365,7 +365,7 @@ export default function Home() {
       <Faqs />
       <Footer />
       {/* WhatsApp Modal */}
-      {/* <Whatsapp open={open} setOpen={setOpen} /> */}
+      <Whatsapp open={open} setOpen={setOpen} />
     </main>
   );
 }
