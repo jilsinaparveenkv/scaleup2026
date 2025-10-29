@@ -380,11 +380,24 @@ function ScaleUpFAQs() {
         <div className="flex-1 w-full md:w-2/3 space-y-6">
           {/* --- MOBILE VIEW ORDER --- */}
           <div className="flex flex-col md:hidden items-center text-center space-y-4">
-            {/* <img
+          <div className="flex justify-center mt-6 mb-4">
+            <img
               src={eventData.header.leftSvg}
               alt="About ScaleUp"
-              className="w-full max-w-sm h-auto"
-            /> */}
+              className="w-[55%] max-w-[180px] h-auto"
+            />
+</div>
+
+{/* <div className="flex justify-center mt-6 mb-4">
+    <img
+      src="/assets/images/05speakers.svg"
+      alt="About ScaleUp"
+      className="w-[55%] max-w-[180px] h-auto"
+    />
+  </div> */}
+
+
+
             <img
               src={eventData.header.leftIcon}
               alt="About Icons"
@@ -396,21 +409,12 @@ function ScaleUpFAQs() {
             >
               Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
             </p>
-
-
-
-
-
-
-
-
-
-
-            
+      
           </div>
 
           {/* --- DESKTOP VIEW --- */}
           <div className="hidden md:flex flex-col space-y-6 mt-10">
+            
             <p
               className="font-normal font-plusJakartaSans mt-13 text-[28px] leading-[36px] tracking-[0px]"
               style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
