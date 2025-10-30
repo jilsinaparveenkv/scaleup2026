@@ -922,10 +922,10 @@ const cardsRow1: Card[] = [
     year: "2024",
     text: "ScaleUp 2024 sparked D2C entrepreneurship, empowering founders to grow, innovate, and lead bold ventures.",
   },
-  { type: "image", src: "/assets/images/timeline_1.jpg" },
+  { type: "image", src: "/assets/images/timeline_1.webp" },
   { type: "image", src: "/assets/images/timeline_icon1.svg" },
-  { type: "image", src: "/assets/images/timeline_6.jpg" },
-  { type: "image", src: "/assets/images/timeline_5.jpg" },
+  { type: "image", src: "/assets/images/timeline_6.webp" },
+  { type: "image", src: "/assets/images/timeline_5.webp" },
   {
     type: "text",
     year: "2025",
@@ -940,11 +940,11 @@ const cardsRow2: Card[] = [
     year: "2025",
     text: "ScaleUp 2025 united food, fashion, tech, and government to empower brands, investors, and startups to collaborate, scale, and build sustainable opportunities.",
   },
-  { type: "image", src: "/assets/images/timeline_2.jpg" },
-  { type: "image", src: "/assets/images/timeline_3.jpg" },
+  { type: "image", src: "/assets/images/timeline_2.webp" },
+  { type: "image", src: "/assets/images/timeline_3.webp" },
   { type: "image", src: "/assets/images/timeline_icon2.svg" },
-  { type: "image", src: "/assets/images/timeline_7.jpg" },
-  { type: "image", src: "/assets/images/timeline_8.jpg" },
+  { type: "image", src: "/assets/images/timeline_7.webp" },
+  { type: "image", src: "/assets/images/timeline_8.webp" },
 ];
 
 export default function ScaleUpTimeline() {
@@ -1053,28 +1053,30 @@ export default function ScaleUpTimeline() {
         <>
           {/* ----------------- MOBILE LAYOUT ----------------- */}
           {/* SVG Image first, centered, smaller */}
-          <div className="flex justify-center mt-6 mb-4">
-            <img
-              src="/assets/images/04timeline.svg"
-              alt="About ScaleUp"
-              className="w-[55%] max-w-[180px] h-auto"
-            />
-          </div>
+{/* Timeline Image */}
+<div className="flex justify-center mt-6 mb-4">
+  <img
+    src="/assets/images/04timeline.svg"
+    alt="About ScaleUp"
+    className="w-[55%] max-w-[180px] h-auto"
+  />
+</div>
 
-          {/* Text next */}
-           {/* Text next - LEFT ALIGNED */}
-           <div className="flex justify-start mb-6 px-2">
-            <p
-              className="font-plusJakartaSans text-[14px] leading-[20px] text-left"
-              style={{ color: "#202020" }}
-            >
-              Launched in 2024 and global by 2025, ScaleUp 2026 unites
-              innovators and leaders to scale bigger, smarter, faster.
-            </p>
-          </div>
+{/* Text Section */}
+<div className="flex justify-start mb-6 px-3">
+  <p
+    className="text-[18px] leading-[28px] text-start"
+    style={{ color: "#202020", fontFamily: "Plus Jakarta Sans" }}
+  >
+    {/* Launched in 2024 and global by 2025, ScaleUp 2026 unites innovators
+    and leaders to scale bigger, smarter, faster. */}
+  </p>
+  
+</div>
+
 
           {/* Cards: 4 rows × 3 cards */}
-          <div className="flex flex-wrap justify-center gap-0 mt-0">
+          <div className="flex flex-wrap justify-center gap-0 mt-0 px-3">
             {cardsRow1.slice(0, 3).map((card, i) =>
               renderCard(card, "110px", "140px", i, true)
             )}

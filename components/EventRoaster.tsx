@@ -577,7 +577,7 @@ import React from "react";
 const eventData = {
   header: {
     leftSvg: "/assets/images/06theme.svg",
-    leftIcon: "/assets/images/img_icon2.svg",
+    leftIcon: "/assets/images/abouticons.svg",
   },
   events: [
     {
@@ -645,14 +645,6 @@ function ScaleUpEventRoaster() {
           />
 </div>
 
-{/* <div className="flex justify-center mt-6 mb-4">
-    <img
-      src="/assets/images/05speakers.svg"
-      alt="About ScaleUp"
-      className="w-[55%] max-w-[180px] h-auto"
-    />
-  </div> */}
-
           <img
             src={eventData.header.leftIcon}
             alt="About Icons"
@@ -669,20 +661,6 @@ function ScaleUpEventRoaster() {
           </p>
           </div>
         </div>
-
-
-
-        {/* <div className="flex justify-start mb-6 px-2">
-  <p
-    className="text-[18px] leading-[28px] text-start mb-6 px-5"
-    style={{ color: "#202020" }}
-  >
-    ScaleUp 2026 brings diverse experts, leaders, innovators empowering
-    entrepreneurs with global insights, collaboration, and unstoppable
-    business growth.
-  </p>
-  </div> */}
-
         {/* ===== Desktop Layout ===== */}
         <div className="hidden md:flex flex-row items-start gap-10 w-full">
           {/* Left SVG - 35% */}

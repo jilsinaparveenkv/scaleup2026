@@ -728,20 +728,21 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
       </button>
 
       {/* Registration Modal */}
-      <RealRegistrations
+      {/* <RealRegistrations
         isOpen={isRegisterModalOpen}
         onClose={() => setIsRegisterModalOpen(false)}
-      />
+      /> */}
           </div>
 
           {/* Mobile Right Section */}
           <div className="flex md:hidden items-center gap-3">
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="px-4 py-1.5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
-            >
-              Register
-            </button>
+          <button
+  onClick={() => setIsRegisterModalOpen(true)}
+  className="px-4 py-1.5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
+>
+  Register
+</button>
+
             <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
               <Menu size={24} color="#333" />
             </button>
@@ -781,11 +782,22 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
                 Dubai
               </a>
             </div>
-            <button className="mt-2 px-3 py-1 border border-gray-300 rounded-3xl text-sm hover:bg-blue-50">
-              Book Stall
-            </button>
+            <button 
+  onClick={() => setIsModalOpen(true)}
+  className="mt-2 px-3 py-1 border border-gray-300 rounded-3xl text-sm hover:bg-blue-50"
+>
+  Book Stall
+</button>
+
           </div>
         )}
+
+   {/* Registration Modal */}
+   <RealRegistrations
+        isOpen={isRegisterModalOpen}
+        onClose={() => setIsRegisterModalOpen(false)}
+      />
+
       </nav>
     </div>
   );

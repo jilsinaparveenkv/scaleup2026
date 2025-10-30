@@ -364,109 +364,233 @@ function ScaleUpFAQs() {
   };
 
   return (
-    <section className="relative w-full px-6 md:px-16 max-w-full font-plusJakartaSans container mx-auto -px-10 py-12 space-y-12"  style={{fontFamily:"Plus Jakarta Sans"}}>
-      {/* Header Section */}
-      <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full">
-        {/* Left Image (for desktop) */}
-        <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col gap-4 md:items-start items-center">
-          <img
-            src={eventData.header.leftSvg}
-            alt="About ScaleUp"
-            className="w-full h-auto md:w-auto"
-          />
-        </div>
+//     <section className="relative w-full px-6 md:px-16 max-w-full font-plusJakartaSans container mx-auto -px-10 py-12 space-y-12"  style={{fontFamily:"Plus Jakarta Sans"}}>
+//       {/* Header Section */}
+//       <div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full">
+//         {/* Left Image (for desktop) */}
+//         <div className="flex-shrink-0 w-full md:w-1/3 flex flex-col gap-4 md:items-start items-center">
+//           <img
+//             src={eventData.header.leftSvg}
+//             alt="About ScaleUp"
+//             className="w-full h-auto md:w-auto"
+//           />
+//         </div>
 
-        {/* Right Content */}
-        <div className="flex-1 w-full md:w-2/3 space-y-6">
-          {/* --- MOBILE VIEW ORDER --- */}
-          <div className="flex flex-col md:hidden items-center text-center space-y-4">
-          <div className="flex justify-center mt-6 mb-4">
-            <img
-              src={eventData.header.leftSvg}
-              alt="About ScaleUp"
-              className="w-[55%] max-w-[180px] h-auto"
-            />
-</div>
+//         {/* Right Content */}
+//         <div className="flex-1 w-full md:w-2/3 space-y-6">
+//           {/* --- MOBILE VIEW ORDER --- */}
+//           <div className="flex flex-col md:hidden items-center text-center space-y-4">
+//           <div className="flex justify-center mt-6 mb-4">
+//             <img
+//               src={eventData.header.leftSvg}
+//               alt="About ScaleUp"
+//               className="w-[55%] max-w-[180px] h-auto"
+//             />
+// </div>
 
-{/* <div className="flex justify-center mt-6 mb-4">
+// {/* <div className="flex justify-center mt-6 mb-4">
+//     <img
+//       src="/assets/images/05speakers.svg"
+//       alt="About ScaleUp"
+//       className="w-[55%] max-w-[180px] h-auto"
+//     />
+//   </div> */}
+
+
+
+//             <img
+//               src={eventData.header.leftIcon}
+//               alt="About Icons"
+//               className="w-35 h-auto"
+//             />
+//             <p
+//               className="font-normal font-plusJakartaSans text-[20px] leading-[30px] tracking-[0px] mt-2 px-4"
+//               style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
+//             >
+//               Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
+//             </p>
+      
+//           </div>
+
+//           {/* --- DESKTOP VIEW --- */}
+//           <div className="hidden md:flex flex-col space-y-6 mt-10">
+            
+//             <p
+//               className="font-normal font-plusJakartaSans mt-13 text-[28px] leading-[36px] tracking-[0px]"
+//               style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
+//             >
+//               Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
+//             </p>
+//             <div className="flex justify-end md:-mt-10 items-center">
+//               <img
+//                 src={eventData.header.leftIcon}
+//                 alt="About Icons"
+//                 className="w-20 md:w-25 h-auto"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* FAQ Section */}
+//       {/* FAQ Section */}
+// <div className="flex flex-col md:flex-row gap-6">
+//   {/* Left Column */}
+//   <div className="flex-1 flex flex-col gap-6">
+//     {faqs
+//       .filter((_, i) => i % 2 === 0) // even-indexed FAQs
+//       .map((faq) => (
+//         <FAQCard
+//           key={faq.id}
+//           question={faq.question}
+//           answer={faq.answer}
+//           isOpen={openFAQ === faq.id}
+//           onClick={() => handleToggle(faq.id)}
+//         />
+//       ))}
+//   </div>
+
+//   {/* Right Column */}
+//   <div className="flex-1 flex flex-col gap-6">
+//     {faqs
+//       .filter((_, i) => i % 2 !== 0) // odd-indexed FAQs
+//       .map((faq) => (
+//         <FAQCard
+//           key={faq.id}
+//           question={faq.question}
+//           answer={faq.answer}
+//           isOpen={openFAQ === faq.id}
+//           onClick={() => handleToggle(faq.id)}
+//         />
+//       ))}
+//   </div>
+// </div>
+
+//     </section>
+<section
+  className="relative w-full px-6 md:px-16 max-w-full font-plusJakartaSans container mx-auto py-8 space-y-12"
+  style={{ fontFamily: "Plus Jakarta Sans" }}
+>
+
+    {/* HEADER SECTION*/}
+<div className="flex flex-col md:flex-row items-start gap-8 md:gap-10 w-full">
+  
+  {/* ---------- Left Image (Desktop Only) ---------- */}
+  <div className="hidden md:flex flex-shrink-0 w-full md:w-1/3 flex-col gap-4 items-start">
     <img
-      src="/assets/images/05speakers.svg"
+      src={eventData.header.leftSvg}
+      alt="About ScaleUp"
+      className="w-full h-auto md:w-auto"
+    />
+  </div>
+
+  {/* ---------- Right Content ---------- */}
+  <div className="flex-1 w-full md:w-2/3 space-y-6">
+    
+    {/* ===== MOBILE VIEW HEADER ===== */}
+    <div className="block lg:hidden">
+  {/* Mobile Top Image */}
+  <div className="flex justify-center mt-6 mb-4">
+    <img
+      src={eventData.header.leftSvg}
       alt="About ScaleUp"
       className="w-[55%] max-w-[180px] h-auto"
     />
-  </div> */}
-
-
-
-            <img
-              src={eventData.header.leftIcon}
-              alt="About Icons"
-              className="w-35 h-auto"
-            />
-            <p
-              className="font-normal font-plusJakartaSans text-[20px] leading-[30px] tracking-[0px] mt-2 px-4"
-              style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
-            >
-              Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
-            </p>
-      
-          </div>
-
-          {/* --- DESKTOP VIEW --- */}
-          <div className="hidden md:flex flex-col space-y-6 mt-10">
-            
-            <p
-              className="font-normal font-plusJakartaSans mt-13 text-[28px] leading-[36px] tracking-[0px]"
-              style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
-            >
-              Find answers to common questions about ScaleUp Conclave, participation, event highlights, opportunities, logistics, and everything needed for a smooth experience.
-            </p>
-            <div className="flex justify-end md:-mt-10 items-center">
-              <img
-                src={eventData.header.leftIcon}
-                alt="About Icons"
-                className="w-20 md:w-25 h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      {/* FAQ Section */}
-<div className="flex flex-col md:flex-row gap-6">
-  {/* Left Column */}
-  <div className="flex-1 flex flex-col gap-6">
-    {faqs
-      .filter((_, i) => i % 2 === 0) // even-indexed FAQs
-      .map((faq) => (
-        <FAQCard
-          key={faq.id}
-          question={faq.question}
-          answer={faq.answer}
-          isOpen={openFAQ === faq.id}
-          onClick={() => handleToggle(faq.id)}
-        />
-      ))}
   </div>
 
-  {/* Right Column */}
-  <div className="flex-1 flex flex-col gap-6">
-    {faqs
-      .filter((_, i) => i % 2 !== 0) // odd-indexed FAQs
-      .map((faq) => (
-        <FAQCard
-          key={faq.id}
-          question={faq.question}
-          answer={faq.answer}
-          isOpen={openFAQ === faq.id}
-          onClick={() => handleToggle(faq.id)}
-        />
-      ))}
+  {/* Mobile Icon */}
+  <img
+    src={eventData.header.leftIcon}
+    alt="About Icons"
+    className="w-25 h-auto mx-auto mt-4"
+  />
+
+  {/* Mobile Text */}
+  <div className="flex justify-start mb-6 px-2">
+    <p
+      className="text-[18px] leading-[28px] mt-5 text-start -mb-5"
+      style={{ color: "#202020" }}
+    >
+      Find answers to common questions about ScaleUp Conclave, participation,
+      event highlights, opportunities, logistics, and everything needed for a
+      smooth experience.
+    </p>
   </div>
 </div>
 
-    </section>
+
+
+
+
+
+
+   
+
+
+
+
+    {/* ===== DESKTOP VIEW HEADER ===== */}
+    <div className="hidden md:flex flex-col space-y-6 mt-10">
+      {/* Desktop Text */}
+      <p
+        className="font-normal text-[28px] leading-[36px] tracking-[0px]"
+        style={{ color: "#202020" }}
+      >
+        Find answers to common questions about ScaleUp Conclave, participation,
+        event highlights, opportunities, logistics, and everything needed for a
+        smooth experience.
+      </p>
+
+      {/* Desktop Icon (aligned right) */}
+      <div className="flex justify-end items-center -mt-10">
+        <img
+          src={eventData.header.leftIcon}
+          alt="About Icons"
+          className="w-20 md:w-25 h-auto"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+  {/* ==================================================
+      FAQ SECTION
+  ================================================== */}
+  <div className="flex flex-col md:flex-row gap-6">
+    
+    {/* ---------- Left Column (Even Indexed) ---------- */}
+    <div className="flex-1 flex flex-col gap-6">
+      {faqs
+        .filter((_, i) => i % 2 === 0)
+        .map((faq) => (
+          <FAQCard
+            key={faq.id}
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={openFAQ === faq.id}
+            onClick={() => handleToggle(faq.id)}
+          />
+        ))}
+    </div>
+
+    {/* ---------- Right Column (Odd Indexed) ---------- */}
+    <div className="flex-1 flex flex-col gap-6">
+      {faqs
+        .filter((_, i) => i % 2 !== 0)
+        .map((faq) => (
+          <FAQCard
+            key={faq.id}
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={openFAQ === faq.id}
+            onClick={() => handleToggle(faq.id)}
+          />
+        ))}
+    </div>
+  </div>
+</section>
+
+
   );
 }
 

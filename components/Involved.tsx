@@ -352,7 +352,7 @@ function Involved() {
         </div>
         {!isMobile && (
           <img
-            src="/assets/images/img_icon2.svg"
+            src="/assets/images/abouticons.svg"
             alt="Decorative icons"
             className="h-8 w-35"
           />

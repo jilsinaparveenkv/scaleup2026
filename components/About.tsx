@@ -317,14 +317,14 @@ const imagesData: Record<string, ImageItem[]> = {
     { id: 3, src: "/assets/images/cards/dubai3.jpg", alt: "Dubai Image 3" },
   ],
   "2025": [
-    { id: 1, src: "/assets/images/cards/2025_2.jpg", alt: "2025 Image 1" },
-    { id: 2, src: "/assets/images/cards/2025_1.jpg", alt: "2025 Image 2" },
-    { id: 3, src: "/assets/images/cards/2025_3.jpg", alt: "2025 Image 3" },
+    { id: 1, src: "/assets/images/cards/2025_2.webp", alt: "2025 Image 1" },
+    { id: 2, src: "/assets/images/cards/2025_1.webp", alt: "2025 Image 2" },
+    { id: 3, src: "/assets/images/cards/2025_3.webp", alt: "2025 Image 3" },
   ],
   "2024": [
-    { id: 1, src: "/assets/images/cards/2024_1.jpg", alt: "2024 Image 1" },
-    { id: 2, src: "/assets/images/cards/2024_2.jpg", alt: "2024 Image 2" },
-    { id: 3, src: "/assets/images/cards/2024_3.jpg", alt: "2024 Image 3" },
+    { id: 1, src: "/assets/images/cards/2024_1.webp", alt: "2024 Image 1" },
+    { id: 2, src: "/assets/images/cards/2024_2.webp", alt: "2024 Image 2" },
+    { id: 3, src: "/assets/images/cards/2024_3.webp", alt: "2024 Image 3" },
   ],
   All: [
     { id: 1, src: "/assets/images/cards/all_1.jpg", alt: "Dubai Image 1" },
@@ -352,7 +352,7 @@ export default function ScaleUpSection() {
           />
           <div className="flex justify-center items-center mt-4">
             <img
-              src="/assets/images/img_icon2.svg"
+              src="/assets/images/abouticons.svg"
               alt="About Icons"
               className="w-20 md:w-40 h-auto"
             />
@@ -458,13 +458,13 @@ export default function ScaleUpSection() {
 
         {/* Second Icons */}
         <img
-          src="/assets/images/img_icon2.svg"
+          src="/assets/images/abouticons.svg"
           alt="About Icons"
           className="w-35 h-auto mx-auto"
         />
 
         {/* Mobile Text */}
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           <p
             style={{ color: "#202020", fontFamily: "Plus Jakarta Sans", fontWeight: 400, fontSize: "18px", lineHeight: "29px", textAlign: "justify" }}
           >

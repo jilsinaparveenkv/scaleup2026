@@ -366,6 +366,26 @@ export default function Home() {
       <Footer />
       {/* WhatsApp Modal */}
       <Whatsapp open={open} setOpen={setOpen} />
+
+
+      {/* <div className="px-4 sm:px-6 md:px-12 lg:px-16">
+        <Navbar isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+        <Hero />
+        <Date />
+        <About />
+        <Marque />
+        <Involved />
+        <Theme />
+        <Timeline />
+        <Speakers />
+        <Banner />
+        <EventRoaster />
+        <Partners />
+        <Faqs />
+        <Footer />
+      </div> */}
+
+
     </main>
   );
 }
