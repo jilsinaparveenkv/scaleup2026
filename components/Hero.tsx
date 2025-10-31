@@ -271,7 +271,7 @@ function Hero() {
   muted
   playsInline
   preload="none"
-  className="absolute inset-0 w-full h-full object-cover -z-10 rounded-3xl"
+  className="absolute inset-0 w-full h-full object-cover object-[center_80%] -z-10 rounded-3xl"
 >
   <source src="/assets/videos/herobg.mp4" type="video/mp4" />
   <source src="/assets/videos/herobg.webm" type="video/webm" />
@@ -396,7 +396,7 @@ function Hero() {
   muted
   playsInline
   preload="none"
-  className="absolute inset-0 w-full h-full object-cover -z-10 rounded-3xl"
+  className="absolute inset-0 w-full h-full object-cover object-[center_80%] -z-10 rounded-3xl"
 >
   <source src="/assets/videos/herobg.mp4" type="video/mp4" />
   <source src="/assets/videos/herobg.webm" type="video/webm" />
@@ -414,11 +414,11 @@ function Hero() {
           <div className="w-fit p-4 rounded-4xl shadow-sm bg-white/10 text-white mb-4">
             <p className="font-gilmer text-2xl leading-snug">
               ScaleUp <br /> Conclave{" "}
-              <span className="font-bold decoration-[3px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
+              <span className=" decoration-[3px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
                 2026
               </span>{" "}
               <br /> is back and this <br /> time,{" "}
-              <span className="font-bold decoration-[3px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
+              <span className="decoration-[3px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
                 it’s AI.
               </span>
             </p>
