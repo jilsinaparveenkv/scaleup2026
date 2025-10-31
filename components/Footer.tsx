@@ -39,7 +39,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full mt-10 md:mt-15 lg:mt-24 sm:px-5 md:px-5 lg:px-4 py-0 md:py-0">
+    <footer className="w-full mt-10 md:mt-15 lg:mt-24 sm:px-5 md:px-4 lg:px-4 py-0 md:py-0">
       <div
         className="relative mx-auto mb-6 max-w-10xl rounded-3xl overflow-hidden"
         style={{ backgroundColor: "#202020", color: "#FFFFFF" }}
@@ -97,7 +97,7 @@ function Footer() {
                 </h2>
               </div>
               <p
-                className="font-gilmer text-xl mb-8 leading-relaxed"
+                className="font-gilmer text-xl lg:mb-2 mb-8 "
                 style={{ color: "#D1D5DB" }}
               >
                 Kerala&apos;s biggest AI & Technology <br /> conclave bringing
@@ -107,7 +107,7 @@ function Footer() {
               </p>
 
               <div
-                className="font-gilmer flex items-center gap-2 text-lg font-medium mb-3"
+                className="font-gilmer flex items-center gap-2 text-lg font-medium mb-3 lg:mb-2 "
                 style={{ color: "#D1D5DB" }}
               >
                 <Phone size={20} />
@@ -119,7 +119,7 @@ function Footer() {
                 </a>
               </div>
               <div
-                className="font-gilmer flex items-center gap-2 text-lg font-medium mb-3"
+                className="font-gilmer flex items-center gap-2 text-lg font-medium mb-3 lg:mb-2 "
                 style={{ color: "#D1D5DB" }}
               >
                 <Mail size={20} />
@@ -131,7 +131,7 @@ function Footer() {
                 </a>
               </div>
 
-              <div className="flex gap-4 mb-6">
+              <div className="flex gap-4 my-6">
                 {socialIcons.map((icon, index) => (
                   
                   <a
@@ -147,7 +147,7 @@ function Footer() {
               </div>
 
               {/* Location + Map ONLY visible on mobile */}
-              <div className="block md:hidden">
+              <div className="block mt-15 md:hidden">
                 <p className="text-base font-gilmer" style={{ color: "#D1D5DB" }}>
                   <strong>Location:</strong> Shifa Convention Center, <br />
                   Perinthalmanna

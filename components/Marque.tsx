@@ -37,7 +37,7 @@ export default function DepositMarquee() {
       style={{ backgroundColor: '#00D28A', color: 'var(--color-black)' }}
     >
       {/* Fixed "button" on the left */}
-      <div className="flex items-center gap-1 px-4 py-2 rounded-full md:font-semibold cursor-default select-none flex-shrink-0" style={{backgroundColor:"#202020",color:"#FFFFFF"}}>
+      <div className="flex items-center gap-1 px-4 lg:font-normal py-2 rounded-full md:font-semibold cursor-default select-none flex-shrink-0" style={{backgroundColor:"#202020",color:"#FFFFFF"}}>
         ScaleUp Numbers
       </div>
       <ChevronRight size={30} style={{color:"#FFFFFF"}}/>

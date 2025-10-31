@@ -658,7 +658,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   return (
-    <div className="" style={{ fontFamily: "Plus Jakarta Sans" }}>
+    <div className="lg:px-5" style={{ fontFamily: "Plus Jakarta Sans" }}>
       <nav
         className="w-full rounded-4xl px-4 sm:px-7 py-3 my-3 
                    border-t border-gray-200 
@@ -682,12 +682,12 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
           >
             <span>
               <Link href="/#about">About Us</Link> |{" "}
-              <Link href="/#theme">2025 Themes</Link> |{" "}
+              <Link href="/#theme">2026 Themes</Link> |{" "}
               <Link href="/#speakers">ScaleUp Speakers</Link> | Previous editions:
             </span>
             <a
               href="https://2024.scaleupconclave.com/"
-              className="underline font-bold"
+              className="font-bold"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -696,7 +696,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             <span>|</span>
             <a
               href="https://scaleup2025.netlify.app/"
-              className="underline font-bold"
+              className="font-bold"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -705,7 +705,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             <span>|</span>
             <a
               href="https://dubai.scaleupconclave.com/"
-              className="underline font-bold"
+              className="font-bold"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -756,26 +756,26 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
               About Us
             </Link>
             <Link href="/#theme" onClick={() => setIsOpen(false)}>
-              2025 Themes
+              2026 Themes
             </Link>
             <Link href="/#speakers" onClick={() => setIsOpen(false)}>
               ScaleUp Speakers
             </Link>
             <span className="font-semibold mt-1">Previous Editions</span>
             <div className="flex gap-2">
-              <a href="https://2024.scaleupconclave.com/" className="underline"
+              <a href="https://2024.scaleupconclave.com/" className=""
                 target="_blank"
                 rel="noopener noreferrer">
                 2024
               </a>
-              <a href="https://scaleup2025.netlify.app/" className="underline"
+              <a href="https://scaleup2025.netlify.app/" className=""
                 target="_blank"
                 rel="noopener noreferrer">
                 2025
               </a>
               <a
                 href="https://dubai.scaleupconclave.com/"
-                className="underline"
+                className=""
                 target="_blank"
                 rel="noopener noreferrer"
               >

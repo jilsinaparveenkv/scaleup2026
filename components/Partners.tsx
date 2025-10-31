@@ -78,7 +78,7 @@ import React from "react";
 
 export default function PartnersSection() {
   return (
-    <div className="container mx-auto px-4 py-4 md:py-8 lg:py-16" style={{fontFamily:"Plus Jakarta Sans"}}>
+    <div className="container mx-auto px-4 py-4 md:py-8 lg:py-2" style={{fontFamily:"Plus Jakarta Sans"}}>
       {/* Heading */}
       <div className="text-center mb-12">
         <div

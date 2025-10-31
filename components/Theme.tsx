@@ -328,7 +328,7 @@ export default function ScaleUpTheme() {
 
           <div className="mt-6 lg:mt-0">
             <div
-              className="flex items-center gap-2.5 bg-[#202020] rounded-2xl px-6 py-3 text-white text-sm font-medium shadow-2xl"
+              className="flex lg:-mt-20 items-center gap-2.5 bg-[#202020] rounded-2xl px-6 py-3 text-white  shadow-2xl"
               style={{
                 background: "linear-gradient(145deg, #1e1e1e, #242424)",
                 boxShadow: `
@@ -338,8 +338,8 @@ export default function ScaleUpTheme() {
                 border: "1px solid #333",
               }}
             >
-              <Star size={18} fill="#ECA723" stroke="#ECA723" className="drop-shadow-sm" />
-              <span>ScaleUp theme</span>
+              <Star size={11} fill="#ECA723" stroke="#ECA723" className="drop-shadow-sm" />
+              <span style={{fontFamily:"Plus Jakarta Sans"}}>ScaleUp theme</span>
             </div>
           </div>
         </div>

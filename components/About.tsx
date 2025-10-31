@@ -327,7 +327,7 @@ export default function ScaleUpSection() {
               lineHeight: "36px",
             }}
           >
-            ScaleUp Conclave hosted by ScaleUp Village, bringing together entrepreneurs,
+            ScaleUp Conclave hosted by ScaleUp Village, brings together entrepreneurs,
             investors, and aspiring business leaders.
           </p>
           <p
@@ -363,7 +363,7 @@ export default function ScaleUpSection() {
       <div className="hidden lg:flex flex-wrap gap-4 justify-center -mt-10">
         <div
           className="border rounded-2xl backdrop-blur-md p-3 flex flex-wrap gap-3 justify-center"
-          style={{ background: "#FFFFFF2A", borderColor: "rgba(255,255,255,0.2)" }}
+          style={{ background: "#FFFFFF2A", borderColor: "#9CF694" }}
         >
           {filters.map((filter) => (
             <Button

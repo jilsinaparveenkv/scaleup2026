@@ -822,7 +822,7 @@ function ScaleUpEventRoaster() {
         </div>
 
         {/* Paragraph */}
-        <div className="flex justify-start mb-6 px-3 sm:px-6 md:px-10">
+        <div className="flex justify-start mb-6 px-3 sm:px-6 md:px-0">
           <p
             className="text-[16px] sm:text-[18px] md:text-[20px] leading-[26px] sm:leading-[28px] md:leading-[32px] text-start"
             style={{ color: "#202020" }}

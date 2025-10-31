@@ -758,8 +758,8 @@ function ScaleUpFAQs() {
               />
             </div>
 
-            <div className="flex justify-start px-4 mt-4">
-              <p className="text-[20px] leading-[30px] text-center text-[#202020]">
+            <div className="flex justify-start px-4 mt-4 md:px-0">
+              <p className="w-full text-[20px] leading-[30px] text-[#202020]">
                 Find answers to common questions about ScaleUp Conclave,
                 participation, event highlights, opportunities, logistics, and
                 everything needed for a smooth experience.

@@ -1299,7 +1299,7 @@ function ScaleUpSpeakers() {
               placeholder="Search our Speakers"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full border rounded-full px-14 py-3 text-lg placeholder:text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-full px-14 py-3 text-lg placeholder:text-lg placeholder-[#202020] focus:outline-none focus:ring-2 focus:ring-blue-500"
               style={{
                 borderColor: "#000000",
                 height: "50px",

@@ -212,13 +212,15 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
       <div className="fixed inset-0 z-50 backdrop-blur-sm">
         {/* Right Side Modal Container */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-auto lg:right-0 lg:translate-x-0 lg:-translate-y-1/2
-          p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out "
+          className="absolute top-1/2 md:top-1 lg:top-1/2 right-0 transform -translate-y-1/2 
+             w-full lg:w-1/2 p-6 bg-white shadow-lg 
+             max-h-[100vh] overflow-y-auto 
+             transition-transform duration-300 ease-in-out" 
 
           
           // absolute top-1/2 lg:right-0 lg:-translate-x-0 lg:left-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit bg-white shadow-2xl overflow-y-auto rounded-2xl
           style={{
-            width: isMobile ? "100%" : modalWidth,
+            // width: isMobile ? "100%" : modalWidth,
             transform: isOpen ? "translateX(0)" : "translateX(100%)",
           }}
         >
@@ -320,11 +322,11 @@ function RegistrationForm({
 
       {/* fixed inset-0 flex items-center justify-end z-50 */}
 
-      <h1 className="text-xl md:text-2xl font-bold text-gray-900 mt-2 text-start" style={{ fontFamily: "Plus Jakarta Sans" }}>
+      <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mt-2 text-start" style={{ fontFamily: "Plus Jakarta Sans" }}>
         Register Now!
       </h1>
 
-      <p className="text-sm md:text-base text-gray-600 mt-1 text-start">
+      <p className="text-sm md:text-base mt-1 font-semibold text-start" style={{color:"#3E3E3E"}}>
         Secure your spot and be part of the excitement! Register now to receive your entry pass.
       </p>
 
@@ -341,7 +343,7 @@ function RegistrationForm({
             onChange={handleChange}
             onFocus={() => setFocusedField("name")}
             onBlur={() => setFocusedField(null)}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="mt-1 p-3 w-full border rounded-lg text-gray-700 h-[40px] placeholder-[#8D9396]"
             style={getBoxStyle("name")}
             placeholder="Enter your name"
             required
@@ -350,7 +352,7 @@ function RegistrationForm({
 
         {/* Phone */}
         <div>
-          <label className="block text-sm font-medium text-gray-700">
+          <label className="block text-sm font-medium text-gray-700 placeholder-[#8D9396]">
             Phone Number <span className="text-red-500">*</span>
           </label>
           <div className="mt-1 flex gap-2">
@@ -358,7 +360,7 @@ function RegistrationForm({
               name="countryCode"
               value={formData.countryCode}
               onChange={handleChange}
-              className="w-20 p-3 border rounded-lg text-gray-700"
+              className="w-20 pl-2 border rounded-lg h-[40px] text-gray-700"
               style={getBoxStyle("countryCode")}
             >
               <option value="+91">+91</option>
@@ -370,7 +372,7 @@ function RegistrationForm({
               onChange={handleChange}
               onFocus={() => setFocusedField("phone")}
               onBlur={() => setFocusedField(null)}
-              className="flex-1 p-3 border rounded-lg text-gray-700"
+              className="flex-1 p-3 border rounded-lg h-[40px] text-gray-700"
               style={getBoxStyle("phone")}
               placeholder="Enter your phone number"
               required
@@ -388,7 +390,7 @@ function RegistrationForm({
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="mt-1 p-3 w-full border h-[40px] rounded-lg text-gray-700"
             style={getBoxStyle("email")}
             placeholder="Enter your email"
             required
@@ -404,7 +406,7 @@ function RegistrationForm({
             name="district"
             value={formData.district}
             onChange={handleChange}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="pl-2 w-full border rounded-lg h-[40px] text-gray-700"
             style={getBoxStyle("district")}
             required
           >
@@ -443,7 +445,7 @@ function RegistrationForm({
             name="category"
             value={formData.category}
             onChange={handleChange}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="pl-2 w-full border rounded-lg h-[40px] text-gray-700"
             style={getBoxStyle("category")}
             required
           >
@@ -468,7 +470,7 @@ function RegistrationForm({
             name="organization"
             value={formData.organization}
             onChange={handleChange}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="mt-1 p-3 w-full border rounded-lg h-[40px] text-gray-700"
             style={getBoxStyle("organization")}
             placeholder="Enter your organization's name"
           />
@@ -484,7 +486,7 @@ function RegistrationForm({
             name="previousAttendance"
             value={formData.previousAttendance}
             onChange={handleChange}
-            className="mt-1 p-3 w-full border rounded-lg text-gray-700"
+            className="pl-2 w-full border rounded-lg h-[40px] text-gray-700"
             style={getBoxStyle("previousAttendance")}
             required
           >
@@ -559,7 +561,7 @@ function TicketTypeModal({
         <h2 className="text-3xl font-bold text-gray-900 mb-2 leading-tight">
           Select Ticket Type
         </h2>
-        <p className="text-sm text-gray-600 max-w-md leading-relaxed">
+        <p className="text-sm  max-w-md leading-relaxed" style={{color:"#3E3E3E"}}>
           Select the type of pass that suits you best
         </p>
       </div>
@@ -574,7 +576,7 @@ function TicketTypeModal({
               hover:shadow-xl active:scale-[0.98]
               ${selectedTicket === "general"
               ? "border-[#418CFF] bg-[#418CFF40] shadow-lg"
-              : "border-transparent bg-white/50 hover:bg-[#418CFF40] hover:border-[#418CFF]/30"
+              : "border-transparent bg-[#F2F2F2] hover:bg-[#418CFF40] hover:border-[#418CFF]/30"
             }
             `}
           style={{
@@ -606,7 +608,7 @@ function TicketTypeModal({
               hover:shadow-xl active:scale-[0.98]
               ${selectedTicket === "vip"
               ? "border-[#418CFF] bg-[#418CFF40] shadow-lg"
-              : "border-transparent bg-white/50 hover:bg-[#418CFF40] hover:border-[#418CFF]/30"
+              : "border-transparent bg-[#F2F2F2] hover:bg-[#418CFF40] hover:border-[#418CFF]/30"
             }
             `}
           style={{
@@ -705,12 +707,12 @@ function SuccessModal({
   </button>
 
   <div className="text-center mx-auto w-full max-w-md">
-    <h2 className="text-4xl font-bold mt-8" style={{ color: "#4028C8" }}>
+    <h2 className="text-5xl font-bold mt-8" style={{ color: "#4028C8" }}>
       You’re In!
     </h2>
-    <p className="text-lg mt-4" style={{ color: "#3E3E3E" }}>
+    <p className="text-md mt-4" style={{ color: "#3E3E3E" }}>
       Your spot is confirmed — Your event ticket has been sent to your email.
-    </p>
+    Please check your inbox for confirmation and entry details.</p>
 
     <div className="flex justify-center items-center mt-6">
       <img

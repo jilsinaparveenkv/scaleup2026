@@ -152,7 +152,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       {!isMobile && (
         <div className="fixed inset-0 flex items-center backdrop-blur-sm justify-end z-50">
           <div
-            className="absolute top-1/2 lg:right-0 lg:-translate-x-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2 p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
+            className="absolute top-1/2 md:top-1/8 lg:top-1/2 lg:right-0 lg:-translate-x-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2 p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
             style={{
               backgroundColor: "#FFFFFF",
               width: modalWidth,
@@ -251,8 +251,8 @@ function ModalContent({
           <img src="/assets/images/abouticons.svg" alt="About Icons" className="h-6" />
         </div>
 
-        <h2 className="text-xl font-bold mt-2 text-black">Book Your Stall!</h2>
-        <p className="text-sm mt-2 text-gray-700">
+        <h2 className="text-3xl font-bold mt-2 text-black">Book Your Stall!</h2>
+        <p className="text-sm mt-2 font-semibold "style={{color:"#3E3E3E"}}>
         Showcase your products or services at our upcoming event! Fill out the form below to reserve your stall space.
         </p>
       </div>
@@ -267,7 +267,7 @@ function ModalContent({
           { label: "Organization", name: "organization", type: "text", placeholder: "Enter your organization's name" },
         ].map((f) => (
           <div key={f.name}>
-            <label className="block text-sm font-medium text-gray-700">
+            <label className="block text-sm font-medium text-gray-700 placeholder:[#8D9396]">
               {f.label} <span className="text-red-500">*</span>
             </label>
 
@@ -300,7 +300,7 @@ function ModalContent({
                   onChange={handleChange}
                   onFocus={() => setFocusedField(f.name)}
                   onBlur={() => setFocusedField(null)}
-                  className="flex-1 p-2 border rounded"
+                  className="flex-1 p-2 border rounded placeholder-[#8D9396]"
                   style={getBoxStyle(f.name)}
                   placeholder={f.placeholder}
                   required
@@ -338,7 +338,7 @@ function ModalContent({
             style={getBoxStyle("district")}
             required
           >
-            <option value="">Select your district</option>
+            <option value="" style={{color:"#8D9396"}}>Select your district</option>
             {[
               "Thiruvananthapuram",
               "Kollam",
@@ -392,7 +392,7 @@ function ModalContent({
             style={getBoxStyle("stall_type")}
             required
           >
-            <option value="">Select a stall</option>
+            <option value="" style={{color:"#8D9396"}}>Select a stall  type</option>
             <option value="Normal Stall">Normal Stall</option>
           </select>
         </div>
@@ -439,10 +439,10 @@ function ModalContent({
             </button>
 
             <div className="text-center">
-              <h2 className="text-4xl font-bold mt-8" style={{ color: "#4028C8" }}>
+              <h2 className="text-6xl font-bold mt-8" style={{ color: "#4028C8" }}>
                 Thank You!
               </h2>
-              <p className="text-lg mt-4" style={{ color: "#3E3E3E" }}>
+              <p className="text-md mt-4" style={{ color: "#3E3E3E" }}>
                 Your details have been successfully submitted. <br /> Our team will contact you soon.
               </p>
 

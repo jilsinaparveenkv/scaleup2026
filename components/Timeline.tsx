@@ -305,11 +305,11 @@ export default function ScaleUpTimeline() {
         key={index}
         className="flex flex-col justify-between"
         style={{
-          width: device === "Mobile" ? "100px" : device === "Tab" ? "200px" : "200px",
+          width: device === "Mobile" ? "100px" : device === "Tab" ? "230px" : "200px",
           height: device === "Mobile" ? "150px" : device === "Tab" ? "272.21px" : "272.21px",
           backgroundColor: "#202020",
           color: "#FFFFFF",
-          padding: device === "Mobile" ? "12px" : "16px",
+          padding: device === "Mobile" ? "12px" : device === "Tab" ? "9px":"16px",
           borderRadius: "20px",
           border: "0.7px solid rgba(255,255,255,0.2)",
         }}
@@ -378,7 +378,7 @@ export default function ScaleUpTimeline() {
 
   return (
     <section
-      className="relative w-full px-4 sm:px-8 md:px-12 lg:px-16 py-0 md:py-0 bg-white overflow-hidden"
+      className="relative w-full px-4 md:px-9 sm:px-8 lg:px-16 py-0 md:py-0 bg-white overflow-hidden"
       style={{ fontFamily: "Plus Jakarta Sans" }}
     >
       {/* ---------------- MOBILE VIEW ---------------- */}
@@ -456,17 +456,17 @@ export default function ScaleUpTimeline() {
 
 
         {/* Cards Layout (same total width & padding) */}
-        <div className="flex flex-col items-center mt-6 mb-4 px-2">
-          <div className="flex flex-wrap justify-center gap-0 mt-0 px-6">
+        <div className="flex flex-col items-center mt-6 mb-4">
+          <div className="w-full flex flex-wrap justify-center gap-0 mt-0 px-2">
             {cardsRow1.slice(0, 3).map((card, i) => renderCard(card, i, "Tab"))}
           </div>
-          <div className="flex flex-wrap justify-center gap-0 mt-0 px-6">
+          <div className="w-full flex flex-wrap justify-center gap-0 mt-0 px-2">
             {cardsRow1.slice(3, 6).map((card, i) => renderCard(card, i + 3, "Tab"))}
           </div>
-          <div className="flex flex-wrap justify-center gap-0 mt-0 px-6">
+          <div className="w-full flex flex-wrap justify-center gap-0 mt-0 px-2">
             {cardsRow2.slice(0, 3).map((card, i) => renderCard(card, i, "Tab"))}
           </div>
-          <div className="flex flex-wrap justify-center gap-0 mt-0 mb-10 px-6">
+          <div className="w-full flex flex-wrap justify-center gap-0 mt-0 mb-10 px-2">
             {cardsRow2.slice(3, 6).map((card, i) => renderCard(card, i + 3, "Tab"))}
           </div>
         </div>

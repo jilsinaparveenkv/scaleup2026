@@ -461,7 +461,7 @@ export default function DateSection() {
 
         {/* Right Side - Timer */}
         <div className="font-gilmer text-center">
-          <div className="flex justify-center gap-4 flex-nowrap">
+          <div className="flex justify-center lg:gap-0 flex-nowrap">
             {Object.entries(timeLeft).map(([label, value]) => (
               <div key={label} className="flex flex-col items-center min-w-[90px]">
                 <span className="font-sans text-[112px] leading-[124px] text-black">{value}</span>
