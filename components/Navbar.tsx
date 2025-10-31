@@ -27,7 +27,7 @@
 //             className="text-[6px] sm:text-[8px] md:text-base text-center flex flex-wrap justify-center gap-1 md:gap-2 "
 //             style={{ color: "#060832" }}
 //           >
-          
+
 //                 {/* <Link href="/#about" className="hover:text-red-500 transition"> */}
 //                 <span><Link href="/#about">About US  </Link>| <Link href="/#theme">2025 Themes</Link> | <Link href="/#speakers">ScaleUp Speakers</Link> | Previous editions:</span>
 //                 {/* className="hover:text-gray-500 transition" */}
@@ -50,7 +50,7 @@
 //               className="underline font-bold"
 //               target="_blank"
 //               rel="noopener noreferrer"
-            
+
 //             >
 //               Dubai
 //             </a>
@@ -100,7 +100,7 @@
 //                    bg-[var(--color-bg)]"
 //       >
 //         <div className="flex justify-between items-center">
-          
+
 //           {/* Left Logo */}
 //           <div className="flex items-center">
 //             <img
@@ -241,7 +241,7 @@
 //                    bg-[var(--color-bg)]"
 //       >
 //         <div className="flex justify-between items-center">
-          
+
 //           {/* Left Logo */}
 //           <div className="flex items-center">
 //             <img
@@ -378,7 +378,7 @@
 //                    bg-[var(--color-bg)]"
 //       >
 //         <div className="flex justify-between items-center">
-          
+
 //           {/* Left Logo */}
 //           <div className="flex items-center">
 //             <img
@@ -572,8 +572,8 @@
 //               Book Stall
 //             </button>
 //             <button
-           
-              
+
+
 //               className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition max-w-[120px] text-sm sm:text-base"
 //             >
 //               Register
@@ -658,7 +658,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
   const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
   return (
-    <div className="" style={{fontFamily:"Plus Jakarta Sans"}}>
+    <div className="" style={{ fontFamily: "Plus Jakarta Sans" }}>
       <nav
         className="w-full rounded-4xl px-4 sm:px-7 py-3 my-3 
                    border-t border-gray-200 
@@ -677,7 +677,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
 
           {/* Desktop Center Links */}
           <div
-            className="hidden md:flex text-[6px] sm:text-[8px] md:text-base text-center flex-wrap justify-center gap-2"
+            className="hidden lg:flex text-[6px]  :text-[8px] lg:text-base text-center flex-wrap justify-center gap-2"
             style={{ color: "#060832" }}
           >
             <span>
@@ -714,34 +714,34 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
           </div>
 
           {/* Right Buttons (Desktop) */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <button
-            onClick={() => setIsModalOpen(true)}
-             className="px-3 py-1.5 sm:px-4 sm:py-2 border border-gray-400 text-gray-800 rounded-4xl hover:bg-blue-50 transition max-w-[120px] text-sm sm:text-base">
+              onClick={() => setIsModalOpen(true)}
+              className="px-3 py-1.5 sm:px-4 sm:py-2 border border-gray-400 text-gray-800 rounded-4xl hover:bg-blue-50 transition max-w-[120px] text-sm sm:text-base">
               Book Stall
             </button>
             <button
-        onClick={() => setIsRegisterModalOpen(true)}
-        className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition max-w-[120px] text-sm sm:text-base"
-      >
-        Register
-      </button>
+              onClick={() => setIsRegisterModalOpen(true)}
+              className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-600 text-white rounded-4xl hover:bg-blue-700 transition max-w-[120px] text-sm sm:text-base"
+            >
+              Register
+            </button>
 
-      {/* Registration Modal */}
-      {/* <RealRegistrations
+            {/* Registration Modal */}
+            {/* <RealRegistrations
         isOpen={isRegisterModalOpen}
         onClose={() => setIsRegisterModalOpen(false)}
       /> */}
           </div>
 
           {/* Mobile Right Section */}
-          <div className="flex md:hidden items-center gap-3">
-          <button
-  onClick={() => setIsRegisterModalOpen(true)}
-  className="px-4 py-1.5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
->
-  Register
-</button>
+          <div className="flex lg:hidden items-center gap-3">
+            <button
+              onClick={() => setIsRegisterModalOpen(true)}
+              className="px-4 py-1.5 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition"
+            >
+              Register
+            </button>
 
             <button onClick={() => setIsOpen(!isOpen)} aria-label="Menu">
               <Menu size={24} color="#333" />
@@ -751,7 +751,7 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
 
         {/* Mobile Dropdown Menu */}
         {isOpen && (
-          <div className="md:hidden mt-3 flex flex-col items-center gap-2 text-sm text-gray-800">
+          <div className="lg:hidden mt-3 flex flex-col items-center gap-2 text-sm text-gray-800">
             <Link href="/#about" onClick={() => setIsOpen(false)}>
               About Us
             </Link>
@@ -764,13 +764,13 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
             <span className="font-semibold mt-1">Previous Editions</span>
             <div className="flex gap-2">
               <a href="https://2024.scaleupconclave.com/" className="underline"
-              target="_blank"
-              rel="noopener noreferrer">
+                target="_blank"
+                rel="noopener noreferrer">
                 2024
               </a>
               <a href="https://scaleup2025.netlify.app/" className="underline"
-              target="_blank"
-              rel="noopener noreferrer">
+                target="_blank"
+                rel="noopener noreferrer">
                 2025
               </a>
               <a
@@ -782,21 +782,21 @@ function Navbar({ isModalOpen, setIsModalOpen }: NavbarProps) {
                 Dubai
               </a>
             </div>
-            <button 
-  onClick={() => setIsModalOpen(true)}
-  className="mt-2 px-3 py-1 border border-gray-300 rounded-3xl text-sm hover:bg-blue-50"
->
-  Book Stall
-</button>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="mt-2 px-3 py-1 border border-gray-300 rounded-3xl text-sm hover:bg-blue-50"
+            >
+              Book Stall
+            </button>
 
           </div>
         )}
 
-   {/* Registration Modal */}
-   <RealRegistrations
-        isOpen={isRegisterModalOpen}
-        onClose={() => setIsRegisterModalOpen(false)}
-      />
+        {/* Registration Modal */}
+        <RealRegistrations
+          isOpen={isRegisterModalOpen}
+          onClose={() => setIsRegisterModalOpen(false)}
+        />
 
       </nav>
     </div>

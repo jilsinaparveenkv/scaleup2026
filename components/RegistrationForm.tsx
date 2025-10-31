@@ -150,9 +150,9 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
     <>
       {/* ---------------- Desktop View ---------------- */}
       {!isMobile && (
-        <div className="fixed inset-0 flex items-center justify-end z-50">
+        <div className="fixed inset-0 flex items-center backdrop-blur-sm justify-end z-50">
           <div
-            className="p-6 shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
+            className="absolute top-1/2 lg:right-0 lg:-translate-x-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2 p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
             style={{
               backgroundColor: "#FFFFFF",
               width: modalWidth,
@@ -180,7 +180,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 
       {/* ---------------- Mobile View ---------------- */}
       {isMobile && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+        <div className="fixed inset-0 flex items-center backdrop-blur-sm justify-center z-50">
           <div
             className="p-6 shadow-lg max-h-[95vh] overflow-y-auto  transform transition-transform duration-300 ease-in-out w-[90%]"
             style={{

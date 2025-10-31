@@ -31,19 +31,19 @@ export default function DepositMarquee() {
 
 
 
-    <div className='px-2 md:px-10'>
+    <div className='px-2 md:px-10 py-5'>
     <div
       className="w-full rounded-3xl p-2 flex items-center "
       style={{ backgroundColor: '#00D28A', color: 'var(--color-black)' }}
     >
       {/* Fixed "button" on the left */}
-      <div className="flex items-center gap-1 px-4 py-2 rounded-full font-semibold cursor-default select-none flex-shrink-0" style={{backgroundColor:"#202020",color:"#FFFFFF"}}>
+      <div className="flex items-center gap-1 px-4 py-2 rounded-full md:font-semibold cursor-default select-none flex-shrink-0" style={{backgroundColor:"#202020",color:"#FFFFFF"}}>
         ScaleUp Numbers
       </div>
       <ChevronRight size={30} style={{color:"#FFFFFF"}}/>
 
       {/* Scrolling marquee */}
-      <div className="flex-1 overflow-hidden ml-4">
+      <div className="flex-1 overflow-hidden">
         <Marquee gradient={false} speed={50} direction="right">
           <span className="mr-8">
             17000+ Total attendees | 900+ Local Business Heroes | 150+ Educational Institutions | 200+ Keynote Speakers | 30+ Investors in Attendance

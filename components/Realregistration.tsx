@@ -69,7 +69,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-  
+
 
 
 
@@ -208,11 +208,15 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
 
 
-      
-      <div className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm">
+
+      <div className="fixed inset-0 z-50 backdrop-blur-sm">
         {/* Right Side Modal Container */}
         <div
-          className="absolute top-0 right-0 h-full bg-white shadow-2xl overflow-y-auto rounded-l-2xl transition-transform duration-300"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:left-auto lg:right-0 lg:translate-x-0 lg:-translate-y-1/2
+          p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out "
+
+          
+          // absolute top-1/2 lg:right-0 lg:-translate-x-0 lg:left-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-fit bg-white shadow-2xl overflow-y-auto rounded-2xl
           style={{
             width: isMobile ? "100%" : modalWidth,
             transform: isOpen ? "translateX(0)" : "translateX(100%)",
@@ -274,7 +278,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
 
 
 
-      <Toaster position="top-center" reverseOrder={false} /> 
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }
@@ -298,30 +302,30 @@ function RegistrationForm({
   onClose: () => void;
 }) {
   return (
-    <div className="p-6 relative z-50">
-    <div className="flex justify-between items-center w-full">
-  <button
-    onClick={onClose}
-    className="text-gray-500 hover:text-red-600 transition"
-  >
-    <X size={22} style={{color:"red"}}/>
-  </button>
+    <div className="p-6 relative z-50 h-[90vh] overflow-y-auto rounded-2xl">
+      <div className="flex justify-between items-center w-full">
+        <button
+          onClick={onClose}
+          className="text-gray-500 hover:text-red-600 transition"
+        >
+          <X size={22} style={{ color: "red" }} />
+        </button>
 
-  <img
-    src="/assets/images/abouticons.svg"
-    alt="About Icons"
-    className="w-16 md:w-20 h-auto"
-  />
-</div>
+        <img
+          src="/assets/images/abouticons.svg"
+          alt="About Icons"
+          className="w-16 md:w-20 h-auto"
+        />
+      </div>
 
       {/* fixed inset-0 flex items-center justify-end z-50 */}
 
-      <h1 className="text-xl md:text-2xl font-bold text-gray-900 mt-2 text-start" style={{fontFamily:"Plus Jakarta Sans"}}>
+      <h1 className="text-xl md:text-2xl font-bold text-gray-900 mt-2 text-start" style={{ fontFamily: "Plus Jakarta Sans" }}>
         Register Now!
       </h1>
-    
+
       <p className="text-sm md:text-base text-gray-600 mt-1 text-start">
-      Secure your spot and be part of the excitement! Register now to receive your entry pass.
+        Secure your spot and be part of the excitement! Register now to receive your entry pass.
       </p>
 
       <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
@@ -522,7 +526,7 @@ function TicketTypeModal({
   const handleSelect = (type: "general" | "vip") => setSelectedTicket(type);
 
   return (
-    <div className="p-6 relative">
+    <div className="p-6 lg:right-0 lg:-translate-x-0 relative">
       {/* Close Button */}
       <div className="absolute top-4 left-0 right-0 flex justify-between items-center px-4">
         {/* Left: Close Button */}
@@ -530,7 +534,7 @@ function TicketTypeModal({
           onClick={() => setStep("form")}
           className="text-gray-500 hover:text-red-600 transition"
         >
-          <X size={20} style={{color:"red"}}/>
+          <X size={20} style={{ color: "red" }} />
         </button>
 
         {/* Right: Image */}
@@ -657,7 +661,8 @@ function SuccessModal({
   modalWidth: string;
 }) {
   return (
-    <div className="flex items-center justify-center h-full relative p-6">
+    <div className="flex items-center justify-center h-full relative p-6 max-h-[100vh]">
+      
       <button
         onClick={() => {
           setStep("form");
@@ -666,7 +671,7 @@ function SuccessModal({
         className="absolute top-4 left-4 text-gray-500 hover:text-red-600 transition"
         style={{ color: "red" }}
       >
-        <X size={24} style={{color:"red"}}/>
+        <X size={24} style={{ color: "red" }} />
       </button>
 
       <div className="text-center mx-auto w-full">

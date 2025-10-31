@@ -1,257 +1,236 @@
-// "use client";
 
-// import React, { useEffect, useState } from "react";
+// // vercal
+// // "use client";
 
-// function DateSection() {
-//   const targetDate = new Date("2026-01-17T09:00:00");
-//   const [timeLeft, setTimeLeft] = useState({
-//     days: "00",
-//     hours: "00",
-//     minutes: "00",
-//     seconds: "00",
-//   });
+// // import React, { useEffect, useState, useMemo } from "react";
+// // import Image from "next/image"; // use next/image for optimization
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       const now = new Date();
-//       const diff = targetDate.getTime() - now.getTime();
+// // export default function DateSection() {
+// //   //  useMemo to ensure the Date object is stable across renders
+// //   const targetDate = useMemo(() => new Date("2026-01-17T09:00:00"), []);
 
-//       if (diff <= 0) {
-//         clearInterval(interval);
-//         setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
-//         return;
-//       }
+// //   const [timeLeft, setTimeLeft] = useState({
+// //     days: "00",
+// //     hours: "00",
+// //     minutes: "00",
+// //     seconds: "00",
+// //   });
 
-//       const totalSeconds = Math.floor(diff / 1000);
-//       const seconds = totalSeconds % 60;
-//       const totalMinutes = Math.floor(totalSeconds / 60);
-//       const minutes = totalMinutes % 60;
-//       const totalHours = Math.floor(totalMinutes / 60);
-//       const hours = totalHours % 24;
-//       const days = Math.floor(totalHours / 24);
+// //   useEffect(() => {
+// //     const interval = setInterval(() => {
+// //       const now = new Date();
+// //       const diff = targetDate.getTime() - now.getTime();
 
-//       setTimeLeft({
-//         days: String(days).padStart(2, "0"),
-//         hours: String(hours).padStart(2, "0"),
-//         minutes: String(minutes).padStart(2, "0"),
-//         seconds: String(seconds).padStart(2, "0"),
-//       });
-//     }, 1000);
+// //       if (diff <= 0) {
+// //         clearInterval(interval);
+// //         setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
+// //         return;
+// //       }
 
-//     return () => clearInterval(interval);
-//   }, [targetDate]);
+// //       const totalSeconds = Math.floor(diff / 1000);
+// //       const seconds = totalSeconds % 60;
+// //       const totalMinutes = Math.floor(totalSeconds / 60);
+// //       const minutes = totalMinutes % 60;
+// //       const totalHours = Math.floor(totalMinutes / 60);
+// //       const hours = totalHours % 24;
+// //       const days = Math.floor(totalHours / 24);
 
-//   return (
-//     <section
-//       className="w-full px-4 sm:px-8 md:px-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-6 md:gap-10"
-//       style={{ backgroundColor: "var(--color-bg)" }}
-//     >
-//       {/* Stats (below on mobile, left on desktop) */}
-//       <div
-//         className="font-gilmer leading-[42px] md:leading-[85.97px] p-4 text-2xl sm:text-3xl md:text-[60px] text-left"
-//         style={{ color: "var(--color-text)", fontWeight: "600" }}
-//       >
-//         <p className="flex items-center justify-start gap-2 text-3xl md:text-[60px]">
-//           2 Days
-//           <img
-//             src="/assets/images/repeat.svg"
-//             alt="rose-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//         <p className="flex items-center justify-start gap-2 text-3xl sm:text-2xl md:text-[60px]">
-//           50+ Speakers
-//           <img
-//             src="/assets/images/union.svg"
-//             alt="green-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//         <p className="flex items-center justify-start gap-2 text-3xl sm:text-2xl md:text-[60px]">
-//           5000+ Innovators
-//           <img
-//             src="/assets/images/group1.svg"
-//             alt="blue-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//       </div>
+// //       setTimeLeft({
+// //         days: String(days).padStart(2, "0"),
+// //         hours: String(hours).padStart(2, "0"),
+// //         minutes: String(minutes).padStart(2, "0"),
+// //         seconds: String(seconds).padStart(2, "0"),
+// //       });
+// //     }, 1000);
 
-//       {/* Timer (top on mobile, right on desktop) */}
-//       <div className="font-gilmer text-center w-full md:w-auto mt-2 md:mt-0">
-//         <div className="flex justify-center gap-2 md:gap-4 flex-nowrap overflow-x-auto">
-//           {Object.entries(timeLeft).map(([label, value], index) => (
-//             <div
-//               key={index}
-//               className="flex flex-col items-center min-w-[50px] md:min-w-auto"
-//             >
-//               <span
-//                 className="text-4xl  sm:text-4xl md:text-8xl tracking-[0.10em]"
-//                 style={{ color: "#000000", fontWeight: "700" }}
-//               >
-//                 {value}
-//               </span>
-//               <span
-//                 className="border rounded-full sm:px-6 px-5 py-1 md:px-14 md:py-1 -mt-2 sm:-mt-2 md:-mt-4 text-xs sm:text-sm md:text-base"
-//                 style={{
-//                   backgroundColor: "#FFFFFF",
-//                   borderColor: "#000000",
-//                   color: "#000000",
-//                 }}
-//               >
-//                 {label}
-//               </span>
-//             </div>
-//           ))}
-//         </div>
-//         <p
-//           className="font-gilmer mt-3 text-xs sm:text-sm md:text-xl"
-//           style={{ color: "#4B5563" }}
-//         >
-//           Kerala's biggest AI & Technology Conclave
-//         </p>
-//       </div>
-//     </section>
-//   );
-// }
+// //     return () => clearInterval(interval);
+// //   }, [targetDate]); //  safe now since targetDate is memoized
 
-// export default DateSection;
+// //   return (
+// //     <section
+// //       className="w-full px-4 sm:px-8 md:px-12 py-10"
+// //       style={{ backgroundColor: "var(--color-bg)",fontFamily:"Plus Jakarta Sans" }}
+// //     >
+// //       {/* ---------------- Desktop View ---------------- */}
+// //       <div className="hidden md:flex flex-row items-center justify-between gap-8">
+// //         {/* Stats Section (Left) */}
+// //         <div
+// //           className="font-gilmer leading-[70px] text-[60px] text-left"
+// //           style={{ color: "var(--color-text)", fontWeight: "600" }}
+// //         >
+// //           <p className="flex items-center gap-2">
+// //             2 Days
+// //             <Image
+// //               src="/assets/images/repeat.svg"
+// //               alt="rose-icon"
+// //               width={36}
+// //               height={36}
+// //               className="h-9 w-9"
+// //             />
+// //           </p>
+// //           <p className="flex items-center gap-2">
+// //             50+ Speakers
+// //             <Image
+// //               src="/assets/images/union.svg"
+// //               alt="green-icon"
+// //               width={36}
+// //               height={36}
+// //               className="h-9 w-9"
+// //             />
+// //           </p>
+// //           <p className="flex items-center gap-2">
+// //             5000+ Innovators
+// //             <Image
+// //               src="/assets/images/group1.svg"
+// //               alt="blue-icon"
+// //               width={36}
+// //               height={36}
+// //               className="h-9 w-9"
+// //             />
+// //           </p>
+// //         </div>
 
+// //         {/* Timer Section (Right) */}
+// //         <div className="font-gilmer text-center">
+// //           <div className="flex justify-center gap-4 flex-nowrap">
+// //             {Object.entries(timeLeft).map(([label, value], index) => (
+// //               <div
+// //                 key={index}
+// //                 className="flex flex-col items-center min-w-[90px]"
+// //               >
+// //                 <span
+// //                   className="font-sans font-plusjakartasans text-[112.66px] leading-[124.88px]"
+// //                   style={{ color: "#000000" }}
+// //                 >
+// //                   {value}
+// //                 </span>
+// //                 <div className="p-3 -mt-10"style={{backgroundColor:"white"}}>
+// //                 <span
+// //                   className="border rounded-full px-14 py-1 -mt-10 text-base"
+// //                   style={{
+// //                     backgroundColor: "#FFFFFF",
+// //                     borderColor: "#000000",
+// //                     color: "#000000",
+// //                   }}
+// //                 >
+// //                   {label}
+// //                 </span>
+// //                 </div>
+// //               </div>
+// //             ))}
+// //           </div>
+// //           <p
+// //             className="font-gilmer mt-3 text-xl"
+// //             style={{ color: "#4B5563" }}
+// //           >
+// //             Kerala&apos;s biggest AI & Technology Conclave
+// //           </p>
+// //         </div>
+// //       </div>
 
+// //       {/* ---------------- Mobile View ---------------- */}
+// //       <div className="flex flex-col md:hidden items-center justify-center gap-6">
+// //   {/* Timer Section (Top) */}
+// //   <div className="font-gilmer text-center w-full">
+// //     <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
+// //       {Object.entries(timeLeft).map(([label, value], index) => (
+// //         <div
+// //           key={index}
+// //           className="flex flex-col items-center min-w-[60px]" // smaller width
+// //         >
+// //           <span
+// //             className="font-sans font-normal text-[48px] sm:text-[64px] leading-[60px] sm:leading-[80px]" // ↓ reduced from 70/90
+// //             style={{ color: "#000000" }}
+// //           >
+// //             {value}
+// //           </span>
+// //           <div className="p-2 -mt-6" style={{ backgroundColor: "white" }}>
+// //             <span
+// //               className="border rounded-full sm:px-5 px-4 py-1 sm:py-1 -mt-4 sm:-mt-2 text-[10px] sm:text-xs" // smaller label
+// //               style={{
+// //                 backgroundColor: "#FFFFFF",
+// //                 borderColor: "#000000",
+// //                 color: "#000000",
+// //               }}
+// //             >
+// //               {label}
+// //             </span>
+// //           </div>
+// //         </div>
+// //       ))}
+// //     </div>
 
+// //     <p
+// //       className="font-gilmer mt-2 text-[10px] sm:text-xs"
+// //       style={{ color: "#4B5563" }}
+// //     >
+// //       Kerala&apos;s biggest AI & Technology Conclave
+// //     </p>
+// //   </div>
 
+// //   {/* Stats Section (Below) */}
+// //   <div
+// //     className="font-gilmer leading-[32px] text-xl sm:text-2xl text-left w-full px-4"
+// //     style={{ color: "var(--color-text)", fontWeight: "600" }}
+// //   >
+// //     <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+// //       2 Days
+// //       <Image
+// //         src="/assets/images/repeat.svg"
+// //         alt="rose-icon"
+// //         width={24}
+// //         height={24}
+// //         className="h-5 w-5 sm:h-6 sm:w-6"
+// //       />
+// //     </p>
+// //     <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+// //       50+ Speakers
+// //       <Image
+// //         src="/assets/images/union.svg"
+// //         alt="green-icon"
+// //         width={24}
+// //         height={24}
+// //         className="h-5 w-5 sm:h-6 sm:w-6"
+// //       />
+// //     </p>
+// //     <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+// //       5000+ Innovators
+// //       <Image
+// //         src="/assets/images/group1.svg"
+// //         alt="blue-icon"
+// //         width={24}
+// //         height={24}
+// //         className="h-5 w-5 sm:h-6 sm:w-6"
+// //       />
+// //     </p>
+// //   </div>
+// // </div>
 
-// "use client";
-
-// import React, { useEffect, useState } from "react";
-
-// function DateSection() {
-//   const targetDate = new Date("2026-01-17T09:00:00");
-//   const [timeLeft, setTimeLeft] = useState({
-//     days: "00",
-//     hours: "00",
-//     minutes: "00",
-//     seconds: "00",
-//   });
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       const now = new Date();
-//       const diff = targetDate.getTime() - now.getTime();
-
-//       if (diff <= 0) {
-//         clearInterval(interval);
-//         setTimeLeft({ days: "00", hours: "00", minutes: "00", seconds: "00" });
-//         return;
-//       }
-
-//       const totalSeconds = Math.floor(diff / 1000);
-//       const seconds = totalSeconds % 60;
-//       const totalMinutes = Math.floor(totalSeconds / 60);
-//       const minutes = totalMinutes % 60;
-//       const totalHours = Math.floor(totalMinutes / 60);
-//       const hours = totalHours % 24;
-//       const days = Math.floor(totalHours / 24);
-
-//       setTimeLeft({
-//         days: String(days).padStart(2, "0"),
-//         hours: String(hours).padStart(2, "0"),
-//         minutes: String(minutes).padStart(2, "0"),
-//         seconds: String(seconds).padStart(2, "0"),
-//       });
-//     }, 1000);
-
-//     return () => clearInterval(interval);
-//   }, [targetDate]);
-
-//   return (
-//     <section
-//       className="w-full px-4 sm:px-8 md:px-12 flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-6 md:gap-10"
-//       style={{ backgroundColor: "var(--color-bg)" }}
-//     >
-//       {/* Stats (below on mobile, left on desktop) */}
-//       <div
-//         className="font-gilmer leading-[42px] md:leading-[85.97px] p-4 text-2xl sm:text-3xl md:text-[60px] text-left"
-//         style={{ color: "var(--color-text)", fontWeight: "600" }}
-//       >
-//         <p className="flex items-center justify-start gap-2 text-3xl md:text-[60px]">
-//           2 Days
-//           <img
-//             src="/assets/images/repeat.svg"
-//             alt="rose-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//         <p className="flex items-center justify-start gap-2 text-3xl sm:text-2xl md:text-[60px]">
-//           50+ Speakers
-//           <img
-//             src="/assets/images/union.svg"
-//             alt="green-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//         <p className="flex items-center justify-start gap-2 text-3xl sm:text-2xl md:text-[60px]">
-//           5000+ Innovators
-//           <img
-//             src="/assets/images/group1.svg"
-//             alt="blue-icon"
-//             className="h-6 w-6 md:h-9 md:w-9"
-//           />
-//         </p>
-//       </div>
-
-//       {/* Timer (top on mobile, right on desktop) */}
-//       <div className="font-gilmer text-center w-full md:w-auto mt-2 md:mt-0">
-//       <div className="flex justify-center gap-2 md:gap-4 flex-nowrap">
-//   {Object.entries(timeLeft).map(([label, value], index) => (
-//     <div
-//       key={index}
-//       className="flex flex-col items-center min-w-[70px] md:min-w-auto"
-//     >
-//       <span
-//         className="font-sans font-normal text-[112.66px] leading-[124.88px] tracking-[0px]"
-//         style={{ color: "#000000" }}
-//       >
-//         {value}
-//       </span>
-//       <span
-//         className="border rounded-full sm:px-6 px-5 py-1 md:px-14 md:py-1 -mt-2 sm:-mt-2 md:-mt-10 text-xs sm:text-sm md:text-base"
-//         style={{
-//           backgroundColor: "#FFFFFF",
-//           borderColor: "#000000",
-//           color: "#000000",
-//         }}
-//       >
-//         {label}
-//       </span>
-//     </div>
-//   ))}
-// </div>
-
-//         <p
-//           className="font-gilmer mt-3 text-xs sm:text-sm md:text-xl"
-//           style={{ color: "#4B5563" }}
-//         >
-//           Kerala's biggest AI & Technology Conclave
-//         </p>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default DateSection;
+// //     </section>
+// //   );
+// // }
 
 
 
 
-// responsive(without vercal)
+
+
+
+
+
+
+
+
+
 
 // "use client";
 
-// import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState, useMemo } from "react";
+// import Image from "next/image";
 
 // export default function DateSection() {
-//   const targetDate = new Date("2026-01-17T09:00:00");
+//   const targetDate = useMemo(() => new Date("2026-01-17T09:00:00"), []);
+
 //   const [timeLeft, setTimeLeft] = useState({
 //     days: "00",
 //     hours: "00",
@@ -260,7 +239,6 @@
 //   });
 
 //   useEffect(() => {
-    
 //     const interval = setInterval(() => {
 //       const now = new Date();
 //       const diff = targetDate.getTime() - now.getTime();
@@ -292,41 +270,27 @@
 
 //   return (
 //     <section
-//       className="w-full px-4 sm:px-8 md:px-12 py-10"
-//       style={{ backgroundColor: "var(--color-bg)" }}
+//       className="w-full px-4 sm:px-8 md:px-10 py-10"
+//       style={{ backgroundColor: "var(--color-bg)", fontFamily: "Plus Jakarta Sans" }}
 //     >
-
 //       {/* ---------------- Desktop View ---------------- */}
-//       <div className="hidden md:flex flex-row items-center justify-between gap-10">
-        
+//       <div className="hidden lg:flex flex-row items-center justify-between gap-8">
 //         {/* Stats Section (Left) */}
 //         <div
-//           className="font-gilmer leading-[85.97px] text-[60px] text-left"
+//           className="font-gilmer leading-[70px] text-[60px] text-left"
 //           style={{ color: "var(--color-text)", fontWeight: "600" }}
 //         >
 //           <p className="flex items-center gap-2">
 //             2 Days
-//             <img
-//               src="/assets/images/repeat.svg"
-//               alt="rose-icon"
-//               className="h-9 w-9"
-//             />
+//             <Image src="/assets/images/repeat.svg" alt="rose-icon" width={36} height={36} className="h-9 w-9" />
 //           </p>
 //           <p className="flex items-center gap-2">
 //             50+ Speakers
-//             <img
-//               src="/assets/images/union.svg"
-//               alt="green-icon"
-//               className="h-9 w-9"
-//             />
+//             <Image src="/assets/images/union.svg" alt="green-icon" width={36} height={36} className="h-9 w-9" />
 //           </p>
 //           <p className="flex items-center gap-2">
 //             5000+ Innovators
-//             <img
-//               src="/assets/images/group1.svg"
-//               alt="blue-icon"
-//               className="h-9 w-9"
-//             />
+//             <Image src="/assets/images/group1.svg" alt="blue-icon" width={36} height={36} className="h-9 w-9" />
 //           </p>
 //         </div>
 
@@ -334,121 +298,108 @@
 //         <div className="font-gilmer text-center">
 //           <div className="flex justify-center gap-4 flex-nowrap">
 //             {Object.entries(timeLeft).map(([label, value], index) => (
-//               <div
-//                 key={index}
-//                 className="flex flex-col items-center min-w-[90px]"
-//               >
-//                 <span
-//                   className="font-sans font-plusjakartasans text-[112.66px] leading-[124.88px]"
-//                   style={{ color: "#000000" }}
-//                 >
+//               <div key={index} className="flex flex-col items-center min-w-[90px]">
+//                 <span className="font-sans text-[112.66px] leading-[124.88px]" style={{ color: "#000000" }}>
 //                   {value}
 //                 </span>
-//                 <span
-//                   className="border rounded-full px-14 py-1 -mt-10 text-base"
-//                   style={{
-//                     backgroundColor: "#FFFFFF",
-//                     borderColor: "#000000",
-//                     color: "#000000",
-//                   }}
-//                 >
-//                   {label}
-//                 </span>
+//                 <div className="p-3 -mt-10 bg-white">
+//                   <span
+//                     className="border rounded-full px-14 py-1 text-base"
+//                     style={{ backgroundColor: "#FFFFFF", borderColor: "#000000", color: "#000000" }}
+//                   >
+//                     {label}
+//                   </span>
+//                 </div>
 //               </div>
 //             ))}
 //           </div>
-//           <p
-//             className="font-gilmer mt-3 text-xl"
-//             style={{ color: "#4B5563" }}
-//           >
-//             Kerala's biggest AI & Technology Conclave
+//           <p className="font-gilmer mt-3 text-xl" style={{ color: "#4B5563" }}>
+//             Kerala&apos;s biggest AI & Technology Conclave
 //           </p>
 //         </div>
 //       </div>
 
-//       {/* ---------------- Mobile View ---------------- */}
-//       <div className="flex flex-col md:hidden items-center justify-center gap-6">
-        
+//       {/* ---------------- Mobile + Tablet View ---------------- */}
+//       <div className="flex flex-col lg:hidden items-center justify-center gap-8">
 //         {/* Timer Section (Top) */}
 //         <div className="font-gilmer text-center w-full">
-//           <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
+//           <div className="flex justify-center gap-3 sm:gap-6 flex-nowrap">
 //             {Object.entries(timeLeft).map(([label, value], index) => (
 //               <div
 //                 key={index}
-//                 className="flex flex-col items-center min-w-[70px]"
+//                 className="flex flex-col items-center min-w-[60px] sm:min-w-[80px] md:min-w-[100px]"
 //               >
 //                 <span
-//                   className="font-sans font-normal text-[70px] sm:text-[90px] leading-[90px] sm:leading-[110px]"
+//                   className="font-sans font-normal 
+//                   text-[48px] sm:text-[64px] md:text-[80px] 
+//                   leading-[60px] sm:leading-[80px] md:leading-[96px]"
 //                   style={{ color: "#000000" }}
 //                 >
 //                   {value}
 //                 </span>
-//                 <span
-//                   className="border rounded-full sm:px-6 px-5 py-1 sm:py-1 -mt-8 sm:-mt-2 text-xs sm:text-sm"
-//                   style={{
-//                     backgroundColor: "#FFFFFF",
-//                     borderColor: "#000000",
-//                     color: "#000000",
-//                   }}
-//                 >
-//                   {label}
-//                 </span>
+//                 <div className="p-2 sm:p-3 md:p-4 -mt-6 sm:-mt-8 md:-mt-10 bg-white">
+//                   <span
+//                     className="border rounded-full 
+//                     px-4 sm:px-6 md:px-8 
+//                     py-1 text-[10px] sm:text-xs md:text-sm"
+//                     style={{
+//                       backgroundColor: "#FFFFFF",
+//                       borderColor: "#000000",
+//                       color: "#000000",
+//                     }}
+//                   >
+//                     {label}
+//                   </span>
+//                 </div>
 //               </div>
 //             ))}
 //           </div>
 
 //           <p
-//             className="font-gilmer mt-3 text-xs sm:text-sm"
+//             className="font-gilmer mt-3 
+//             text-[10px] sm:text-xs md:text-base"
 //             style={{ color: "#4B5563" }}
 //           >
-//             Kerala's biggest AI & Technology Conclave
+//             Kerala&apos;s biggest AI & Technology Conclave
 //           </p>
 //         </div>
 
 //         {/* Stats Section (Below) */}
 //         <div
-//           className="font-gilmer leading-[42px] text-2xl sm:text-3xl text-left w-full px-4"
+//           className="font-gilmer text-left w-full px-4 
+//           text-xl sm:text-2xl md:text-3xl 
+//           leading-[32px] sm:leading-[40px] md:leading-[48px]"
 //           style={{ color: "var(--color-text)", fontWeight: "600" }}
 //         >
-//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//           <p className="flex items-center gap-2">
 //             2 Days
-//             <img
-//               src="/assets/images/repeat.svg"
-//               alt="rose-icon"
-//               className="h-6 w-6 sm:h-8 sm:w-8"
-//             />
+//             <Image src="/assets/images/repeat.svg" alt="rose-icon" width={30} height={30} className="h-5 sm:h-6 md:h-8 w-5 sm:w-6 md:w-8" />
 //           </p>
-//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//           <p className="flex items-center gap-2">
 //             50+ Speakers
-//             <img
-//               src="/assets/images/union.svg"
-//               alt="green-icon"
-//               className="h-6 w-6 sm:h-8 sm:w-8"
-//             />
+//             <Image src="/assets/images/union.svg" alt="green-icon" width={30} height={30} className="h-5 sm:h-6 md:h-8 w-5 sm:w-6 md:w-8" />
 //           </p>
-//           <p className="flex items-center gap-2 text-3xl sm:text-4xl">
+//           <p className="flex items-center gap-2">
 //             5000+ Innovators
-//             <img
-//               src="/assets/images/group1.svg"
-//               alt="blue-icon"
-//               className="h-6 w-6 sm:h-8 sm:w-8"
-//             />
+//             <Image src="/assets/images/group1.svg" alt="blue-icon" width={30} height={30} className="h-5 sm:h-6 md:h-8 w-5 sm:w-6 md:w-8" />
 //           </p>
 //         </div>
-
 //       </div>
 //     </section>
 //   );
 // }
 
-// vercal
+
+
+
+
 "use client";
 
 import React, { useEffect, useState, useMemo } from "react";
-import Image from "next/image"; // use next/image for optimization
+import Image from "next/image";
 
 export default function DateSection() {
-  //  useMemo to ensure the Date object is stable across renders
+  // Target date for countdown
   const targetDate = useMemo(() => new Date("2026-01-17T09:00:00"), []);
 
   const [timeLeft, setTimeLeft] = useState({
@@ -486,173 +437,124 @@ export default function DateSection() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]); //  safe now since targetDate is memoized
+  }, [targetDate]);
 
   return (
-    <section
-      className="w-full px-4 sm:px-8 md:px-12 py-10"
-      style={{ backgroundColor: "var(--color-bg)",fontFamily:"Plus Jakarta Sans" }}
-    >
-      {/* ---------------- Desktop View ---------------- */}
-      <div className="hidden md:flex flex-row items-center justify-between gap-8">
-        {/* Stats Section (Left) */}
-        <div
-          className="font-gilmer leading-[70px] text-[60px] text-left"
-          style={{ color: "var(--color-text)", fontWeight: "600" }}
-        >
+    <section className="w-full px-4 sm:px-8 md:px-10 md:py-10 py-3 bg-[#FFFFFF] font-['Plus_Jakarta_Sans']">
+      {/* ---------------- Desktop View (lg and above) ---------------- */}
+      <div className="hidden lg:flex flex-row items-center justify-between gap-8 text-[#000]">
+        {/* Left Side - Stats */}
+        <div className="font-gilmer leading-[70px] text-[60px] font-semibold text-left">
           <p className="flex items-center gap-2">
             2 Days
-            <Image
-              src="/assets/images/repeat.svg"
-              alt="rose-icon"
-              width={36}
-              height={36}
-              className="h-9 w-9"
-            />
+            <Image src="/assets/images/repeat.svg" alt="rose-icon" width={36} height={36} />
           </p>
           <p className="flex items-center gap-2">
             50+ Speakers
-            <Image
-              src="/assets/images/union.svg"
-              alt="green-icon"
-              width={36}
-              height={36}
-              className="h-9 w-9"
-            />
+            <Image src="/assets/images/union.svg" alt="green-icon" width={36} height={36} />
           </p>
           <p className="flex items-center gap-2">
             5000+ Innovators
-            <Image
-              src="/assets/images/group1.svg"
-              alt="blue-icon"
-              width={36}
-              height={36}
-              className="h-9 w-9"
-            />
+            <Image src="/assets/images/group1.svg" alt="blue-icon" width={36} height={36} />
           </p>
         </div>
 
-        {/* Timer Section (Right) */}
+        {/* Right Side - Timer */}
         <div className="font-gilmer text-center">
           <div className="flex justify-center gap-4 flex-nowrap">
-            {Object.entries(timeLeft).map(([label, value], index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center min-w-[90px]"
-              >
-                <span
-                  className="font-sans font-plusjakartasans text-[112.66px] leading-[124.88px]"
-                  style={{ color: "#000000" }}
-                >
-                  {value}
-                </span>
-                <div className="p-3 -mt-10"style={{backgroundColor:"white"}}>
-                <span
-                  className="border rounded-full px-14 py-1 -mt-10 text-base"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderColor: "#000000",
-                    color: "#000000",
-                  }}
-                >
-                  {label}
-                </span>
+            {Object.entries(timeLeft).map(([label, value]) => (
+              <div key={label} className="flex flex-col items-center min-w-[90px]">
+                <span className="font-sans text-[112px] leading-[124px] text-black">{value}</span>
+                <div className="p-3 -mt-10 bg-white">
+                  <span className="border border-black rounded-full px-14 py-1 text-base bg-white text-black">
+                    {label}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
-          <p
-            className="font-gilmer mt-3 text-xl"
-            style={{ color: "#4B5563" }}
-          >
+          <p className="mt-3 text-xl text-gray-600">
             Kerala&apos;s biggest AI & Technology Conclave
           </p>
         </div>
       </div>
 
-      {/* ---------------- Mobile View ---------------- */}
-      <div className="flex flex-col md:hidden items-center justify-center gap-6">
-  {/* Timer Section (Top) */}
+      {/* ---------------- Tablet View (md to lg) ---------------- */}
+      <div className="hidden md:flex lg:hidden flex-col items-center justify-center gap-8 text-[#000]">
+  {/* Timer Section */}
   <div className="font-gilmer text-center w-full">
-    <div className="flex justify-center gap-2 sm:gap-4 flex-nowrap">
-      {Object.entries(timeLeft).map(([label, value], index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center min-w-[60px]" // smaller width
-        >
-          <span
-            className="font-sans font-normal text-[48px] sm:text-[64px] leading-[60px] sm:leading-[80px]" // ↓ reduced from 70/90
-            style={{ color: "#000000" }}
-          >
-            {value}
-          </span>
-          <div className="p-2 -mt-6" style={{ backgroundColor: "white" }}>
-            <span
-              className="border rounded-full sm:px-5 px-4 py-1 sm:py-1 -mt-4 sm:-mt-2 text-[10px] sm:text-xs" // smaller label
-              style={{
-                backgroundColor: "#FFFFFF",
-                borderColor: "#000000",
-                color: "#000000",
-              }}
-            >
+    <div className="flex justify-center gap-5 sm:gap-6">
+      {Object.entries(timeLeft).map(([label, value]) => (
+        <div key={label} className="flex flex-col items-center min-w-[75px]">
+          <span className=" text-[90px] leading-[88px]">{value}</span>
+          <div className="p-2 -mt-5 bg-white">
+            <span className="border border-black rounded-full px-9 py-1.5 text-sm bg-white text-black">
               {label}
             </span>
           </div>
         </div>
       ))}
     </div>
-
-    <p
-      className="font-gilmer mt-2 text-[10px] sm:text-xs"
-      style={{ color: "#4B5563" }}
-    >
+    <p className="mt-4 text-lg text-gray-600">
       Kerala&apos;s biggest AI & Technology Conclave
     </p>
   </div>
 
-  {/* Stats Section (Below) */}
-  <div
-    className="font-gilmer leading-[32px] text-xl sm:text-2xl text-left w-full px-4"
-    style={{ color: "var(--color-text)", fontWeight: "600" }}
-  >
-    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+  {/* Stats Section */}
+  <div className="font-gilmer font-semibold leading-[54px] text-5xl text-left w-full px-8">
+    <p className="flex items-center gap-3">
       2 Days
-      <Image
-        src="/assets/images/repeat.svg"
-        alt="rose-icon"
-        width={24}
-        height={24}
-        className="h-5 w-5 sm:h-6 sm:w-6"
-      />
+      <Image src="/assets/images/repeat.svg" alt="rose-icon" width={36} height={36} />
     </p>
-    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+    <p className="flex items-center gap-3">
       50+ Speakers
-      <Image
-        src="/assets/images/union.svg"
-        alt="green-icon"
-        width={24}
-        height={24}
-        className="h-5 w-5 sm:h-6 sm:w-6"
-      />
+      <Image src="/assets/images/union.svg" alt="green-icon" width={36} height={36} />
     </p>
-    <p className="flex items-center gap-2 text-2xl sm:text-3xl">
+    <p className="flex items-center gap-3">
       5000+ Innovators
-      <Image
-        src="/assets/images/group1.svg"
-        alt="blue-icon"
-        width={24}
-        height={24}
-        className="h-5 w-5 sm:h-6 sm:w-6"
-      />
+      <Image src="/assets/images/group1.svg" alt="blue-icon" width={36} height={36} />
     </p>
   </div>
 </div>
 
+
+      {/* ---------------- Mobile View (below md) ---------------- */}
+      <div className="flex flex-col md:hidden items-center justify-center gap-6 text-[#000]">
+        {/* Timer Section */}
+        <div className="font-gilmer text-center w-full">
+          <div className="flex justify-center gap-2 sm:gap-4">
+            {Object.entries(timeLeft).map(([label, value]) => (
+              <div key={label} className="flex flex-col items-center min-w-[60px]">
+                <span className="font-sans text-[48px] leading-[60px]">{value}</span>
+                <div className="p-2 -mt-6 bg-white">
+                  <span className="border border-black rounded-full px-4 py-1 text-[10px] bg-white text-black">
+                    {label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="mt-2 text-[10px] text-gray-600">
+            Kerala&apos;s biggest AI & Technology Conclave
+          </p>
+        </div>
+
+        {/* Stats Section */}
+        <div className="font-gilmer font-semibold leading-[32px] text-xl text-left w-full px-4">
+          <p className="flex items-center gap-2 text-2xl">
+            2 Days
+            <Image src="/assets/images/repeat.svg" alt="rose-icon" width={24} height={24} />
+          </p>
+          <p className="flex items-center gap-2 text-2xl">
+            50+ Speakers
+            <Image src="/assets/images/union.svg" alt="green-icon" width={24} height={24} />
+          </p>
+          <p className="flex items-center gap-2 text-2xl">
+            5000+ Innovators
+            <Image src="/assets/images/group1.svg" alt="blue-icon" width={24} height={24} />
+          </p>
+        </div>
+      </div>
     </section>
   );
 }
-
-
-
-
-
