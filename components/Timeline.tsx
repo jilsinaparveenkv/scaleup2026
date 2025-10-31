@@ -410,7 +410,7 @@ export default function ScaleUpTimeline() {
         </div>
 
         {/* Cards Layout */}
-        <div className="flex flex-wrap justify-center gap-0 mt-0 px-3">
+        <div className="flex flex-wrap justify-center gap-0 mt-0 sm:-px-10">
           {cardsRow1.slice(0, 3).map((card, i) => renderCard(card, i, "Mobile"))}
         </div>
         <div className="flex flex-wrap justify-center gap-0 mt-0">
