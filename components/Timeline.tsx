@@ -305,7 +305,7 @@ export default function ScaleUpTimeline() {
         key={index}
         className="flex flex-col justify-between"
         style={{
-          width: device === "Mobile" ? "100px" : device === "Tab" ? "230px" : "200px",
+          width: device === "Mobile" ? "110px" : device === "Tab" ? "230px" : "200px",
           height: device === "Mobile" ? "150px" : device === "Tab" ? "272.21px" : "272.21px",
           backgroundColor: "#202020",
           color: "#FFFFFF",
@@ -358,7 +358,7 @@ export default function ScaleUpTimeline() {
         key={index}
         className="flex items-center justify-center bg-white rounded-xl overflow-hidden"
         style={{
-          width: device === "Mobile" ? "100px" : "200px",
+          width: device === "Mobile" ? "110px" : "200px",
           height: device === "Mobile" ? "150px" : "272.21px",
         }}
       >
@@ -400,7 +400,7 @@ export default function ScaleUpTimeline() {
           </div>
           <div className="flex justify-start mb-0 md:mb-6 px-2">
             <p
-              className="text-[18px] leading-[28px] text-start mb-6 px-5"
+              className="text-[18px] leading-[28px] text-start mb-6 px-0"
               style={{ color: "#202020", fontFamily: "Plus Jakarta Sans" }}
             >
               Launched in 2024 and global by 2025, ScaleUp 2026 unites innovators
@@ -410,7 +410,7 @@ export default function ScaleUpTimeline() {
         </div>
 
         {/* Cards Layout */}
-        <div className="flex flex-wrap justify-center gap-0 mt-0 sm:-px-10">
+        <div className="flex flex-wrap justify-center gap-0 mt-0 ">
           {cardsRow1.slice(0, 3).map((card, i) => renderCard(card, i, "Mobile"))}
         </div>
         <div className="flex flex-wrap justify-center gap-0 mt-0">

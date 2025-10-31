@@ -157,42 +157,159 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 
 
 
-  if (response.ok && !result.hasError) {
-    setMessage({ type: "success", text: "Form submitted successfully!" });
-    setFormData({
-      name: "",
-      countryCode: "+91",
-      phone: "",
-      email: "",
-      designation: "",
-      organization: "",
-      district: "",
-      stall_type: "",
-      otherDistrict: "",
-    });
-    setShowSuccessModal(true);
-  } else {
-    setMessage({
-      type: "error",
-      text:
-        result?.message?.toString().toLowerCase().includes("phone")
-          ? "Phone number is already registered."
-          : result?.message?.toString().toLowerCase().includes("email")
-          ? "Email address is already registered."
-          : result?.message?.toString().toLowerCase().includes("required")
-          ? "Please fill all required fields."
-          : result?.message?.toString().toLowerCase().includes("invalid")
-          ? "Please enter valid details."
-          : "Something went wrong. Please try again.",
-    });
-    
+
+//   if (response.ok && !result.hasError) {
+//     // ✅ SUCCESS
+//     setMessage({ type: "success", text: "Form submitted successfully!" });
+//     setFormData({
+//       name: "",
+//       countryCode: "+91",
+//       phone: "",
+//       email: "",
+//       designation: "",
+//       organization: "",
+//       district: "",
+//       stall_type: "",
+//       otherDistrict: "",
+//     });
+//     setShowSuccessModal(true);
+//   } else {
+//     //  ERROR HANDLING
+//     let errorMessage = "Something went wrong. Please try again.";
+
+//     if (result?.message) {
+//       const msg =
+//         typeof result.message === "string"
+//           ? result.message.toLowerCase()
+//           : JSON.stringify(result.message).toLowerCase();
+
+//       if (msg.includes("phone")) {
+//         errorMessage = "Phone number is already registered.";
+//       } else if (msg.includes("email")) {
+//         errorMessage = "Email address is already registered.";
+//       } else if (msg.includes("exists")) {
+//         // for “already exists” messages without specific field name
+//         errorMessage = "This entry is already registered.";
+//       } else if (msg.includes("required")) {
+//         errorMessage = "Please fill all required fields.";
+//       } else if (msg.includes("invalid")) {
+//         errorMessage = "Please enter valid details.";
+//       }
+//     }
+
+//     setMessage({ type: "error", text: errorMessage });
+//   }
+// } catch (error) {
+//   console.error("Form submission error:", error);
+//   setMessage({ type: "error", text: "An error occurred while submitting the form." });
+// } finally {
+//   setLoading(false);
+// }
+// };
+if (response.ok && !result.hasError) {
+  // ✅ SUCCESS
+  setMessage({ type: "success", text: "Form submitted successfully!" });
+  setFormData({
+    name: "",
+    countryCode: "+91",
+    phone: "",
+    email: "",
+    designation: "",
+    organization: "",
+    district: "",
+    stall_type: "",
+    otherDistrict: "",
+  });
+  setShowSuccessModal(true);
+} else {
+  // ⚠️ ERROR HANDLING
+  let errorMessages: string[] = [];
+
+  if (result?.message) {
+    const msg =
+      typeof result.message === "string"
+        ? result.message.toLowerCase()
+        : JSON.stringify(result.message).toLowerCase();
+
+    // check for multiple possible errors
+    if (msg.includes("phone")) {
+      errorMessages.push("Phone number is already registered.");
+    }
+    if (msg.includes("email")) {
+      errorMessages.push("Email address is already registered.");
+    }
+    if (msg.includes("exists") && errorMessages.length === 0) {
+      errorMessages.push("This entry is already registered.");
+    }
+    if (msg.includes("required")) {
+      errorMessages.push("Please fill all required fields.");
+    }
+    if (msg.includes("invalid")) {
+      errorMessages.push("Please enter valid details.");
+    }
   }
+
+  if (errorMessages.length === 0) {
+    errorMessages.push("Something went wrong. Please try again.");
+  }
+
+  // ✅ Combine all messages into one line
+  setMessage({ type: "error", text: errorMessages.join(" ") });
+}
 } catch (error) {
+  console.error("Form submission error:", error);
   setMessage({ type: "error", text: "An error occurred while submitting the form." });
 } finally {
   setLoading(false);
 }
 };
+
+
+
+//   if (response.ok && !result.hasError) {
+//     setMessage({ type: "success", text: "Form submitted successfully!" });
+//     setFormData({
+//       name: "",
+//       countryCode: "+91",
+//       phone: "",
+//       email: "",
+//       designation: "",
+//       organization: "",
+//       district: "",
+//       stall_type: "",
+//       otherDistrict: "",
+//     });
+//     setShowSuccessModal(true);
+//   } else {
+//     let errorMessage = "Something went wrong. Please try again.";
+
+// if (result?.message) {
+//   const msg =
+//     typeof result.message === "string"
+//       ? result.message.toLowerCase()
+//       : JSON.stringify(result.message).toLowerCase();
+
+//   if (msg.includes("phone")) {
+//     errorMessage = "Phone number is already registered.";
+//   } else if (msg.includes("email")) {
+//     errorMessage = "Email address is already registered.";
+//   } else if (msg.includes("required")) {
+//     errorMessage = "Please fill all required fields.";
+//   } else if (msg.includes("invalid")) {
+//     errorMessage = "Please enter valid details.";
+//   }
+// }
+
+// setMessage({ type: "error", text: errorMessage });
+
+    
+//   }
+// } catch (error) {
+//   setMessage({ type: "error", text: "An error occurred while submitting the form." });
+// } finally {
+//   setLoading(false);
+// }
+// };
 
   if (!isOpen) return null;
 

@@ -697,7 +697,7 @@ function ScaleUpFAQs() {
 
   return (
     <section
-      className="relative w-full px-6 md:px-16 max-w-full font-plusJakartaSans container mx-auto py-8 space-y-12"
+      className="relative w-full px-5 md:px-16 max-w-full font-plusJakartaSans container mx-auto py-8 space-y-12"
       style={{ fontFamily: "Plus Jakarta Sans" }}
     >
       {/* ==================================================
@@ -731,8 +731,8 @@ function ScaleUpFAQs() {
               className="w-24 h-auto mx-auto mt-4"
             />
 
-            <div className="flex justify-start px-2">
-              <p className="text-[18px] leading-[28px] mt-5 text-start text-[#202020]">
+            <div className="flex justify-start px-0">
+              <p className="text-[18px] leading-[28px] mt-5 text-start text-[#202020]" style={{fontFamily:"Plus Jakarta Sans"}}>
                 Find answers to common questions about ScaleUp Conclave,
                 participation, event highlights, opportunities, logistics, and
                 everything needed for a smooth experience.
@@ -759,7 +759,7 @@ function ScaleUpFAQs() {
             </div>
 
             <div className="flex justify-start px-4 mt-4 md:px-0">
-              <p className="w-full text-[20px] leading-[30px] text-[#202020]">
+              <p className="w-full text-[20px] leading-[30px] text-[#202020]" style={{fontFamily:"Plus Jakarta Sans"}}>
                 Find answers to common questions about ScaleUp Conclave,
                 participation, event highlights, opportunities, logistics, and
                 everything needed for a smooth experience.
@@ -772,7 +772,7 @@ function ScaleUpFAQs() {
           <div className="hidden lg:flex flex-col space-y-6 mt-10">
             <p
               className="font-normal text-[28px] leading-[36px] tracking-[0px]"
-              style={{ color: "#202020" }}
+              style={{ color: "#202020",fontFamily:"Plus Jakarta Sans" }}
             >
               Find answers to common questions about ScaleUp Conclave,
               participation, event highlights, opportunities, logistics, and

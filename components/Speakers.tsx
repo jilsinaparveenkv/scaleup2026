@@ -1430,9 +1430,9 @@ function ScaleUpSpeakers() {
         </div>
 
         {/* Description */}
-        <div className="flex justify-start px-2">
+        <div className="flex justify-start px-0">
           <p
-            className="text-[18px] leading-[28px] text-start mb-6 px-5"
+            className="text-[18px] leading-[28px] text-start mb-6 px-0"
             style={{ color: "#202020" }}
           >
             ScaleUp 2026 brings diverse experts, leaders, innovators empowering
@@ -1464,7 +1464,7 @@ function ScaleUpSpeakers() {
         </div>
 
         {/* Speakers Grid (1 per row, all rounded corners) */}
-        <div className="grid grid-cols-1 gap-y-6 w-full px-4">
+        <div className="grid grid-cols-1 gap-y-6 w-full px-0">
           {filteredSpeakers.map((speaker, index) => (
             <div
               key={speaker.id}

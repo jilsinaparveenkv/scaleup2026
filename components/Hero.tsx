@@ -228,7 +228,7 @@ function Hero() {
       <div className="hidden lg:block">
         <div className="text-center md:text-right mb-8 p-5 relative z-2">
           {/* First Line */}
-          <h1 className="text-xl lg:text-[85px] lg:pr-20 lg:-ml-29 sm:text-3xl md:text-[90px] mb-3 md:mb-20 flex items-center justify-center md:justify-end gap-3 pl-0 mr-0 md:mr-25">
+          <h1 className="text-xl -pr-30 lg:text-[85px] lg:pr-20 lg:-ml-29 sm:text-3xl md:text-[90px] mb-3 md:mb-20 flex items-center justify-start md:justify-end gap-3 pl-0 mr-0 md:mr-25">
             <span style={{ color: "#418CFF", fontWeight: 2, fontFamily: "Plus Jakarta Sans" }} className="font-gilmer">
               ScaleUp Conclave
             </span>
@@ -299,7 +299,7 @@ function Hero() {
                         2026
                       </span>{" "}
                       <br /> is back and this <br className="block md:hidden" /> time,{" "}
-                      <span className="font-gilmer decoration-[3px]" style={{ textDecorationColor: "#9CF694" }}>
+                      <span className="font-gilmer underline decoration-[#9CF694] decoration-[3px] underline-offset-[7px]" style={{ textDecorationColor: "#9CF694" }}>
                         it’s AI.
                       </span>
                     </p>
@@ -345,7 +345,7 @@ function Hero() {
       <div className="relative w-full z-10 p-3 lg:hidden" style={{ color: "#FFFFFF" }}>
         <div className="text-center md:text-right mb-8 relative z-2">
           {/* First Line */}
-          <h1 className="text-xl sm:text-3xl md:mt-5 md:text-[50px] mb-3 md:mb-10 flex items-center justify-center md:justify-end gap-3 pl-0 mr-0 md:mr-25">
+          <h1 className="text-xl sm:text-3xl md:mt-5 md:text-[50px] mb-0 md:mb-10 flex items-center justify-center md:justify-end gap-3 pl-0 mr-0 md:mr-25">
             <span style={{ color: "#418CFF", fontWeight: 10, fontFamily: "Plus Jakarta Sans" }} className="font-gilmer">
               ScaleUp Conclave
             </span>
@@ -418,7 +418,7 @@ function Hero() {
                 2026
               </span>{" "}
               <br /> is back and this <br /> time,{" "}
-              <span className="decoration-[3px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
+              <span className="underline decoration-[#9CF694] decoration-[3px] underline-offset-[7px]" style={{ textDecorationColor: "#9CF694", fontFamily: "Plus Jakarta Sans" }}>
                 it’s AI.
               </span>
             </p>

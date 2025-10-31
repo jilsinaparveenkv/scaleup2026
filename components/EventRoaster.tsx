@@ -797,7 +797,7 @@ const eventData = {
 function ScaleUpEventRoaster() {
   return (
     <section
-      className="relative w-full py-10 md:py-16 px-4 sm:px-8 md:px-16 max-w-full mx-auto font-plusJakartaSans"
+      className="relative w-full py-10 md:py-16 px-5 sm:px-8 md:px-16 max-w-full mx-auto font-plusJakartaSans"
       id="event-roaster"
       style={{ fontFamily: "Plus Jakarta Sans" }}
     >
@@ -824,10 +824,10 @@ function ScaleUpEventRoaster() {
         </div>
 
         {/* Paragraph */}
-        <div className="flex justify-start mb-6 px-3 sm:px-6 md:px-0">
+        <div className="flex justify-start mb-6 px-0 sm:px-6 md:px-0">
           <p
             className="text-[16px] sm:text-[18px] md:text-[20px] leading-[26px] sm:leading-[28px] md:leading-[32px] text-start"
-            style={{ color: "#202020" }}
+            style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
           >
             Discussions, expert talks, workshops, Startup JAM, exhibitions,
             competitions uniting entrepreneurs to learn, collaborate, and grow
@@ -860,7 +860,7 @@ function ScaleUpEventRoaster() {
           </div>
           <p
             className="text-[28px] leading-[36px] tracking-[0px] mt-10 text-left"
-            style={{ color: "#202020" }}
+            style={{ color: "#202020" ,fontFamily:"Plus Jakarta Sans"}}
           >
             Discussions, expert talks, workshops, Startup JAM, exhibitions,
             competitions uniting entrepreneurs to learn, collaborate, and grow

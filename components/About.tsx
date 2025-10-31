@@ -581,7 +581,7 @@ export default function ScaleUpSection() {
         <div className="-mt-8 px-2">
           <div
             className="flex gap-2 border rounded-2xl backdrop-blur-md p-2 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
-            style={{ background: "#FFFFFF2A", borderColor: "rgba(255,255,255,0.2)" }}
+            style={{ background: "#FFFFFF2A", borderColor: "#9CF694" }}
           >
             {filters.map((filter) => (
               <Button
