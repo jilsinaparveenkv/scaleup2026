@@ -46,16 +46,34 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setModalWidth(`${window.innerWidth / 2}px`);
+  //     setIsMobile(window.innerWidth < 768); // ✅ Detect mobile view
+  //   };
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
   useEffect(() => {
     const handleResize = () => {
-      setModalWidth(`${window.innerWidth / 2}px`);
-      setIsMobile(window.innerWidth < 768); // ✅ Detect mobile view
+      const width = window.innerWidth;
+  
+      // ✅ Make full width on tablet or smaller, half on desktop
+      if (width < 1024) {
+        setModalWidth("100%");
+      } else {
+        setModalWidth(`${width / 2}px`);
+      }
+  
+      setIsMobile(width < 768); // keep your mobile detection
     };
+  
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
+  
   useEffect(() => {
     setShowOtherDistrictInput(formData.district === "Other State");
   }, [formData.district]);
