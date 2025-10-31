@@ -212,7 +212,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
       <div className="fixed inset-0 z-50 backdrop-blur-sm">
         {/* Right Side Modal Container */}
         <div
-          className="absolute top-1/2 md:top-1 lg:top-1/2 right-0 transform -translate-y-1/2 
+          className="absolute top-1/2 md:top-1/2 lg:top-1/2 right-0 transform -translate-y-1/2 
              w-full lg:w-1/2 p-6 bg-white shadow-lg 
              max-h-[100vh] overflow-y-auto 
              transition-transform duration-300 ease-in-out" 

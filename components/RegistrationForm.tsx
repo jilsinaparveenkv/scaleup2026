@@ -191,7 +191,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       {!isMobile && (
         <div className="fixed inset-0 flex items-center backdrop-blur-sm justify-end z-50">
           <div
-            className="absolute top-1/2 md:top-1/8 lg:top-1/2 lg:right-0 lg:-translate-x-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2 p-6  bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
+            className="absolute top-1/2  md:top-1/8 lg:top-1/2 lg:right-0 lg:-translate-x-0 left-1/2 -translate-x-1/2 lg:-translate-y-1/2 p-6  md:w-full bg-white shadow-lg max-h-[100vh] overflow-y-auto transform transition-transform duration-300 ease-in-out"
             style={{
               backgroundColor: "#FFFFFF",
               width: modalWidth,
