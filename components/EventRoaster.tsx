@@ -808,6 +808,7 @@ function ScaleUpEventRoaster() {
           <img
             src={eventData.header.leftSvg}
             alt="About ScaleUp"
+            loading="lazy"
             className="w-[55%] sm:w-[45%] md:w-[40%] max-w-[200px] h-auto"
           />
         </div>
@@ -817,6 +818,7 @@ function ScaleUpEventRoaster() {
           <img
             src={eventData.header.leftIcon}
             alt="About Icons"
+            loading="lazy"
             className="w-[80px] sm:w-[100px] md:w-[120px] h-auto"
           />
         </div>
@@ -841,6 +843,7 @@ function ScaleUpEventRoaster() {
           <img
             src={eventData.header.leftSvg}
             alt="About ScaleUp"
+            loading="lazy"
             className="w-[410px] h-auto"
           />
         </div>
@@ -851,6 +854,7 @@ function ScaleUpEventRoaster() {
             <img
               src={eventData.header.leftIcon}
               alt="About Icons"
+              loading="lazy"
               className="w-20 md:w-28 h-auto"
             />
           </div>
@@ -896,6 +900,7 @@ function ScaleUpEventRoaster() {
               <img
                 src={event.image}
                 alt={`Event ${event.id}`}
+                loading="lazy"
                 className="w-full h-[600px] object-cover"
               />
             </div>

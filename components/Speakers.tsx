@@ -1335,6 +1335,7 @@ function ScaleUpSpeakers() {
               <img
                 src={speaker.image}
                 alt={`${speaker.name}, ${speaker.company}`}
+                loading="lazy"
                 className={`w-full h-70 object-cover ${index % 2 === 0 ? "scale-x-[-1]" : ""}`}
               />
               <div className="p-3 text-center flex-1 flex flex-col justify-center">
@@ -1386,6 +1387,7 @@ function ScaleUpSpeakers() {
               <img
                 src={speaker.image}
                 alt={`${speaker.name}, ${speaker.company}`}
+                loading="lazy"
                 className={`w-full h-[280px] object-cover ${index % 2 === 0 ? "scale-x-[-1]" : ""
                   }`}
               />
@@ -1473,6 +1475,7 @@ function ScaleUpSpeakers() {
               <img
                 src={speaker.image}
                 alt={`${speaker.name}, ${speaker.company}`}
+                loading="lazy"
                 className={`w-full h-[280px] object-cover ${index % 2 === 0 ? "scale-x-[-1]" : ""
                   }`}
               />

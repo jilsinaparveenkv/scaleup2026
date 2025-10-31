@@ -346,7 +346,7 @@ export default function ScaleUpSection() {
       </div>
 
       {/* Desktop Images */}
-      <div className="hidden lg:grid grid-cols-3 gap-4 mb-6">
+      {/* <div className="hidden lg:grid grid-cols-3 gap-4 mb-6">
         <div className="col-span-2 relative w-full h-96 rounded-xl overflow-hidden">
           <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" />
         </div>
@@ -357,7 +357,36 @@ export default function ScaleUpSection() {
             </div>
           ))}
         </div>
+      </div> */}
+      {/* Desktop Images */}
+<div className="hidden lg:grid grid-cols-3 gap-4 mb-6">
+  <div className="col-span-2 relative w-full h-96 rounded-xl overflow-hidden">
+    {/* Main image (load immediately) */}
+    <Image
+      src={images[0].src}
+      alt={images[0].alt}
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  <div className="grid grid-rows-2 gap-4">
+    {images.slice(1).map((img) => (
+      <div key={img.id} className="relative w-full h-44 rounded-xl overflow-hidden">
+        {/* Lazy load other images */}
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* Desktop Filters */}
       <div className="hidden lg:flex flex-wrap gap-4 justify-center -mt-10">
@@ -427,7 +456,7 @@ export default function ScaleUpSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
+        {/* <div className="grid grid-cols-3 gap-3">
           <div className="col-span-2 relative w-full h-64 rounded-xl overflow-hidden">
             <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" />
           </div>
@@ -438,7 +467,35 @@ export default function ScaleUpSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
+        <div className="grid grid-cols-3 gap-3">
+  {/* Main (large) image — load immediately */}
+  <div className="col-span-2 relative w-full h-64 rounded-xl overflow-hidden">
+    <Image
+      src={images[0].src}
+      alt={images[0].alt}
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  {/* Smaller images — lazy loaded */}
+  <div className="grid grid-rows-2 gap-3">
+    {images.slice(1).map((img) => (
+      <div key={img.id} className="relative w-full h-28 rounded-xl overflow-hidden">
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
 
       {/* ---------------- Mobile View ---------------- */}
@@ -477,7 +534,7 @@ export default function ScaleUpSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-2">
+        {/* <div className="grid grid-cols-1 gap-2">
           <div className="relative w-full h-[200px] rounded-md overflow-hidden">
             <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" />
           </div>
@@ -488,7 +545,38 @@ export default function ScaleUpSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
+        <div className="grid grid-cols-1 gap-2">
+  {/* Main image — load immediately for better UX */}
+  <div className="relative w-full h-[200px] rounded-md overflow-hidden">
+    <Image
+      src={images[0].src}
+      alt={images[0].alt}
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+
+  {/* Remaining images — lazy loaded */}
+  <div className="grid grid-cols-2 gap-2">
+    {images.slice(1).map((img) => (
+      <div
+        key={img.id}
+        className="relative w-full h-[110px] rounded-md overflow-hidden"
+      >
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
 
         <div className="-mt-8 px-2">
           <div

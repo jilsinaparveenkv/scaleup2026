@@ -365,6 +365,7 @@ export default function ScaleUpTimeline() {
         <img
           src={card.src}
           alt="ScaleUp event"
+          loading="lazy"
           className={
             card.src.endsWith(".svg")
               ? device === "Mobile"
