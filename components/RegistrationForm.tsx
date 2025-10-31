@@ -223,7 +223,7 @@ if (response.ok && !result.hasError) {
   setShowSuccessModal(true);
 } else {
   // ⚠️ ERROR HANDLING
-  let errorMessages: string[] = [];
+  const errorMessages: string[] = [];
 
   if (result?.message) {
     const msg =
