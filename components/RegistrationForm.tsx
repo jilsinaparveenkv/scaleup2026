@@ -159,7 +159,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               transform: isOpen ? "translateX(0)" : "translateX(100%)",
             }}
           >
-            <ModalContent
+            <ModalContent 
               formData={formData}
               handleChange={handleChange}
               focusedField={focusedField}
