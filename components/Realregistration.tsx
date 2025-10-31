@@ -661,35 +661,67 @@ function SuccessModal({
   modalWidth: string;
 }) {
   return (
-    <div className="flex items-center justify-center h-full relative p-6 max-h-[100vh]">
+    // <div className="flex items-center justify-center h-full relative p-6 ">
       
-      <button
-        onClick={() => {
-          setStep("form");
-          onClose();
-        }}
-        className="absolute top-4 left-4 text-gray-500 hover:text-red-600 transition"
-        style={{ color: "red" }}
-      >
-        <X size={24} style={{ color: "red" }} />
-      </button>
+    //   <button
+    //     onClick={() => {
+    //       setStep("form");
+    //       onClose();
+    //     }}
+    //     className="absolute top-4 left-4 text-gray-500 hover:text-red-600 transition"
+    //     style={{ color: "red" }}
+    //   >
+    //     <X size={24} style={{ color: "red" }} />
+    //   </button>
 
-      <div className="text-center mx-auto w-full">
-        <h2 className="text-4xl font-bold mt-8" style={{ color: "#4028C8" }}>
-          You’re In!
-        </h2>
-        <p className="text-lg mt-4" style={{ color: "#3E3E3E" }}>
-          Your spot is confirmed —Your event ticket has been sent to your email.<br />Please check your inbox for confirmation and entry details.
-        </p>
+    //   <div className="text-center mx-auto w-full">
+    //     <h2 className="text-4xl font-bold mt-8" style={{ color: "#4028C8" }}>
+    //       You’re In!
+    //     </h2>
+    //     <p className="text-lg mt-4" style={{ color: "#3E3E3E" }}>
+    //       Your spot is confirmed —Your event ticket has been sent to your email.</p>
 
-        <div className="flex justify-center items-center mt-4">
-          <img
-            src="/assets/images/abouticons.svg"
-            alt="About Icons"
-            className="w-16 md:w-20 h-auto"
-          />
-        </div>
-      </div>
+    //     <div className="flex justify-center items-center mt-4">
+    //       <img
+    //         src="/assets/images/abouticons.svg"
+    //         alt="About Icons"
+    //         className="w-16 md:w-20 h-auto"
+    //       />
+    //     </div>
+    //   </div>
+    // </div>
+
+
+<div className="flex flex-col items-center justify-center min-h-[90vh]  relative p-6">
+  <button
+    onClick={() => {
+      setStep("form");
+      onClose();
+    }}
+    className="absolute top-4 left-4 text-gray-500 hover:text-red-600 transition"
+    style={{ color: "red" }}
+  >
+    <X size={24} style={{ color: "red" }} />
+  </button>
+
+  <div className="text-center mx-auto w-full max-w-md">
+    <h2 className="text-4xl font-bold mt-8" style={{ color: "#4028C8" }}>
+      You’re In!
+    </h2>
+    <p className="text-lg mt-4" style={{ color: "#3E3E3E" }}>
+      Your spot is confirmed — Your event ticket has been sent to your email.
+    </p>
+
+    <div className="flex justify-center items-center mt-6">
+      <img
+        src="/assets/images/abouticons.svg"
+        alt="About Icons"
+        className="w-16 md:w-20 h-auto"
+      />
     </div>
+  </div>
+</div>
+
+
   );
 }
