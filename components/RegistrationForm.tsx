@@ -127,7 +127,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       );
 
       const result = await response.json();
-
+// sd code
   //     if (response.ok && !result.hasError) {
   //       setMessage({ type: "success", text: "Form submitted successfully!" });
   //       setFormData({
