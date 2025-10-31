@@ -110,32 +110,71 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
 
       const result = await response.json();
 
-      if (response.ok && !result.hasError) {
-        setMessage({ type: "success", text: "Form submitted successfully!" });
-        setFormData({
-          name: "",
-          countryCode: "+91",
-          phone: "",
-          email: "",
-          designation: "",
-          organization: "",
-          district: "",
-          stall_type: "",
-          otherDistrict: "",
-        });
-        setShowSuccessModal(true);
-      } else {
-        setMessage({
-          type: "error",
-          text: "Submission failed: " + JSON.stringify(result.message),
-        });
-      }
-    } catch (error) {
-      setMessage({ type: "error", text: "An error occurred while submitting the form." });
-    } finally {
-      setLoading(false);
-    }
-  };
+  //     if (response.ok && !result.hasError) {
+  //       setMessage({ type: "success", text: "Form submitted successfully!" });
+  //       setFormData({
+  //         name: "",
+  //         countryCode: "+91",
+  //         phone: "",
+  //         email: "",
+  //         designation: "",
+  //         organization: "",
+  //         district: "",
+  //         stall_type: "",
+  //         otherDistrict: "",
+  //       });
+  //       setShowSuccessModal(true);
+  //     } else {
+  //       setMessage({
+  //         type: "error",
+  //         text: "Submission failed123: " + JSON.stringify(result.message),
+  //       });
+  //     }
+  //   } catch (error) {
+  //     setMessage({ type: "error", text: "An error occurred while submitting the form." });
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
+
+  if (response.ok && !result.hasError) {
+    setMessage({ type: "success", text: "Form submitted successfully!" });
+    setFormData({
+      name: "",
+      countryCode: "+91",
+      phone: "",
+      email: "",
+      designation: "",
+      organization: "",
+      district: "",
+      stall_type: "",
+      otherDistrict: "",
+    });
+    setShowSuccessModal(true);
+  } else {
+    setMessage({
+      type: "error",
+      text:
+        result?.message?.toString().toLowerCase().includes("phone")
+          ? "Phone number is already registered."
+          : result?.message?.toString().toLowerCase().includes("email")
+          ? "Email address is already registered."
+          : result?.message?.toString().toLowerCase().includes("required")
+          ? "Please fill all required fields."
+          : result?.message?.toString().toLowerCase().includes("invalid")
+          ? "Please enter valid details."
+          : "Something went wrong. Please try again.",
+    });
+    
+  }
+} catch (error) {
+  setMessage({ type: "error", text: "An error occurred while submitting the form." });
+} finally {
+  setLoading(false);
+}
+};
 
   if (!isOpen) return null;
 
