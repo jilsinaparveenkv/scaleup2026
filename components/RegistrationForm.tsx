@@ -421,7 +421,7 @@ function ModalContent({
     <>
       <div className="flex flex-col">
         <div className="flex justify-between items-center">
-          <X className="cursor-pointer" onClick={onClose} style={{color:"red"}} />
+          <X className=" -mt-8 -ml-4 cursor-pointer" onClick={onClose} style={{color:"red"}} />
           <img src="/assets/images/abouticons.svg" alt="About Icons" className="h-6" />
         </div>
 
@@ -598,7 +598,7 @@ function ModalContent({
       {showSuccessModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-white z-50 transition-all duration-300">
           <div
-            className="bg-white p-6 shadow-2xl relative max-h-[100vh] overflow-y-auto w-full h-full flex items-center justify-center"
+            className="bg-white p-2 shadow-2xl relative max-h-[100vh] overflow-y-auto w-full h-full flex items-center justify-center"
             style={{ width: modalWidth }}
           >
             <button

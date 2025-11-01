@@ -213,7 +213,7 @@ export default function RegistrationModal({ isOpen, onClose }: RegistrationModal
         {/* Right Side Modal Container */}
         <div
           className="absolute top-1/2 md:top-1/2 lg:top-1/2 right-0 transform -translate-y-1/2 
-             w-full lg:w-1/2 p-6 bg-white shadow-lg 
+             w-full lg:w-1/2 p-2 bg-white shadow-lg 
              max-h-[100vh] overflow-y-auto 
              transition-transform duration-300 ease-in-out" 
 
@@ -308,7 +308,7 @@ function RegistrationForm({
       <div className="flex justify-between items-center w-full">
         <button
           onClick={onClose}
-          className="text-gray-500 hover:text-red-600 transition"
+          className="text-gray-500 -mt-10 -ml-5 hover:text-red-600 transition"
         >
           <X size={22} style={{ color: "red" }} />
         </button>
@@ -534,7 +534,7 @@ function TicketTypeModal({
         {/* Left: Close Button */}
         <button
           onClick={() => setStep("form")}
-          className="text-gray-500 hover:text-red-600 transition"
+          className="text-gray-500 -mt-5 -ml-4 hover:text-red-600 transition"
         >
           <X size={20} style={{ color: "red" }} />
         </button>

@@ -463,7 +463,7 @@ export default function ScaleUpTheme() {
             ScaleUp theme
           </div>
 
-          <h1 className="font-semibold text-3xl leading-[1.1] text-white">
+          <h1 className="font-semibold text-2xl leading-[1.1] text-white">
             ScaleUp Conclave 2026
             <br />
             <span className="font-semibold text-white">The Theme</span>
